@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gạo Ông Điền — Gạo Sinh Học Không Glucose | Dành Cho Người Tiểu Đường</title>
+<meta name="description" content="Gạo Ông Điền ST25 sinh học — không glucose, tinh bột thấp. Ăn cơm mà đường huyết không tăng. Thử 7 ngày, hoàn tiền nếu không hài lòng.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+<style>
+html{scroll-behavior:smooth}
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --green:#1a4a2e;--green-mid:#2d7a4f;--green-light:#4CAF76;
+  --gold:#c9a96e;--gold-dark:#a07c45;
+  --cream:#faf7f0;--cream-dark:#f0ead8;
+  --text:#1a1a2e;--text-gray:#5a5a6e;
+  --white:#ffffff;--red:#e53935;
+}
+body{font-family:'Be Vietnam Pro',sans-serif;color:var(--text);background:var(--cream);overflow-x:hidden}
+h1,h2,h3{font-family:'Playfair Display',serif}
+
+/* NAV */
+nav{background:var(--green);padding:14px 24px;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{color:var(--gold);font-weight:800;font-size:1.1rem;letter-spacing:.5px;white-space:nowrap}
+.nav-cta{background:var(--gold);color:var(--green);padding:8px 20px;border-radius:24px;font-weight:700;font-size:.9rem;text-decoration:none;transition:.2s}
+.nav-cta:hover{background:#e8c47e}
+
+/* HERO */
+.hero{background:linear-gradient(135deg,var(--green) 0%,#2d6b45 60%,#1a4a2e 100%);padding:70px 24px 80px;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")}
+.hero-badge{display:inline-block;background:rgba(201,169,110,.2);border:1px solid var(--gold);color:var(--gold);padding:6px 18px;border-radius:24px;font-size:.8rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;margin-bottom:20px}
+.hero h1{color:var(--white);font-size:clamp(2rem,6vw,3.4rem);line-height:1.2;max-width:800px;margin:0 auto 16px}
+.hero h1 span{color:var(--gold)}
+.hero-sub{color:rgba(255,255,255,.8);font-size:1.1rem;max-width:600px;margin:0 auto 32px;line-height:1.7}
+.hero-cta-wrap{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn-primary{background:var(--gold);color:var(--green);padding:16px 36px;border-radius:40px;font-weight:800;font-size:1.05rem;text-decoration:none;display:inline-block;transition:.25s;box-shadow:0 8px 30px rgba(201,169,110,.4)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 40px rgba(201,169,110,.5)}
+.btn-ghost{border:2px solid rgba(255,255,255,.5);color:var(--white);padding:14px 28px;border-radius:40px;font-weight:600;font-size:1rem;text-decoration:none;transition:.2s}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
+.hero-note{color:rgba(255,255,255,.55);font-size:.82rem;margin-top:14px}
+
+/* TRUST BAR */
+.trust-bar{background:var(--green);border-top:1px solid rgba(255,255,255,.1);padding:20px 24px;display:flex;justify-content:center;gap:40px;flex-wrap:wrap}
+.trust-item{display:flex;align-items:center;gap:8px;color:rgba(255,255,255,.85);font-size:.9rem}
+.trust-item span.icon{font-size:1.2rem}
+.trust-item b{color:var(--gold)}
+
+/* STATS */
+.stats{background:var(--cream-dark);padding:50px 24px;text-align:center}
+.stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:24px;max-width:900px;margin:0 auto}
+.stat-card{background:var(--white);border-radius:16px;padding:28px 20px;box-shadow:0 4px 20px rgba(0,0,0,.06)}
+.stat-num{font-size:2.4rem;font-weight:900;color:var(--green);line-height:1}
+.stat-label{color:var(--text-gray);font-size:.88rem;margin-top:6px}
+
+/* PROBLEM */
+.problem{padding:70px 24px;max-width:960px;margin:0 auto}
+.section-badge{display:inline-block;background:rgba(26,74,46,.08);color:var(--green-mid);padding:5px 16px;border-radius:20px;font-size:.78rem;font-weight:700;letter-spacing:.8px;text-transform:uppercase;margin-bottom:16px}
+.problem h2{font-size:clamp(1.7rem,4vw,2.6rem);margin-bottom:16px;color:var(--text)}
+.problem-lead{font-size:1.05rem;color:var(--text-gray);line-height:1.8;margin-bottom:40px}
+.problem-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.prob-card{background:var(--white);border-radius:16px;padding:28px;border-left:4px solid var(--red)}
+.prob-card .icon{font-size:2rem;margin-bottom:12px}
+.prob-card h3{font-family:'Be Vietnam Pro',sans-serif;font-size:1rem;font-weight:700;margin-bottom:8px;color:var(--text)}
+.prob-card p{font-size:.9rem;color:var(--text-gray);line-height:1.6}
+
+/* SOLUTION */
+.solution{background:var(--green);padding:70px 24px;text-align:center}
+.solution h2{color:var(--white);font-size:clamp(1.8rem,4.5vw,2.8rem);margin-bottom:16px}
+.solution p{color:rgba(255,255,255,.8);max-width:640px;margin:0 auto 48px;font-size:1.05rem;line-height:1.7}
+.features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;max-width:1000px;margin:0 auto}
+.feat-card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:28px 22px;text-align:left;transition:.2s}
+.feat-card:hover{background:rgba(255,255,255,.12);transform:translateY(-3px)}
+.feat-icon{font-size:2rem;margin-bottom:14px}
+.feat-card h3{color:var(--gold);font-family:'Be Vietnam Pro',sans-serif;font-size:1rem;font-weight:700;margin-bottom:10px}
+.feat-card p{color:rgba(255,255,255,.75);font-size:.88rem;line-height:1.6}
+
+/* ORIGIN */
+.origin{padding:70px 24px;max-width:1000px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+@media(max-width:700px){.origin{grid-template-columns:1fr}}
+.origin-visual{background:linear-gradient(145deg,#2d7a4f,#1a4a2e);border-radius:24px;padding:40px;text-align:center;position:relative;overflow:hidden}
+.origin-visual::before{content:'🌾';font-size:8rem;opacity:.12;position:absolute;right:-10px;bottom:-10px}
+.origin-visual h3{color:var(--gold);font-size:1.6rem;margin-bottom:12px}
+.origin-visual p{color:rgba(255,255,255,.8);font-size:.95rem;line-height:1.7}
+.process-steps{display:flex;flex-direction:column;gap:16px;margin-top:24px}
+.proc-step{display:flex;gap:14px;align-items:flex-start;background:rgba(255,255,255,.08);border-radius:12px;padding:14px}
+.proc-num{background:var(--gold);color:var(--green);width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.85rem;flex-shrink:0}
+.proc-step p{color:rgba(255,255,255,.85);font-size:.88rem;line-height:1.5}
+.origin-text h2{font-size:clamp(1.7rem,4vw,2.4rem);margin-bottom:16px}
+.origin-text p{color:var(--text-gray);line-height:1.8;margin-bottom:20px}
+.origin-highlights{display:flex;flex-direction:column;gap:10px}
+.highlight{display:flex;gap:10px;align-items:center;font-size:.95rem}
+.highlight .dot{width:8px;height:8px;background:var(--green-mid);border-radius:50%;flex-shrink:0}
+
+/* TESTIMONIALS */
+.testimonials{background:var(--cream-dark);padding:70px 24px}
+.sec-title{text-align:center;margin-bottom:48px}
+.sec-title h2{font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:12px}
+.sec-title p{color:var(--text-gray);max-width:560px;margin:0 auto}
+.testi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;max-width:1000px;margin:0 auto}
+.testi-card{background:var(--white);border-radius:20px;padding:32px;box-shadow:0 4px 24px rgba(0,0,0,.07)}
+.stars{color:var(--gold);font-size:1.1rem;margin-bottom:14px;letter-spacing:2px}
+.testi-text{font-size:.95rem;color:var(--text);line-height:1.7;margin-bottom:20px;font-style:italic}
+.testi-author{display:flex;align-items:center;gap:12px}
+.author-avatar{width:44px;height:44px;border-radius:50%;background:var(--green);display:flex;align-items:center;justify-content:center;color:var(--white);font-weight:700;font-size:1.1rem}
+.author-info strong{display:block;font-size:.95rem}
+.author-info span{color:var(--text-gray);font-size:.82rem}
+.verified{display:inline-flex;align-items:center;gap:4px;background:rgba(76,175,118,.1);color:var(--green-mid);font-size:.72rem;font-weight:600;padding:2px 8px;border-radius:10px;margin-top:4px}
+
+/* OFFER */
+.offer{padding:70px 24px;max-width:760px;margin:0 auto;text-align:center}
+.offer-box{background:var(--green);border-radius:24px;padding:52px 40px;position:relative;overflow:hidden}
+.offer-box::before{content:'';position:absolute;top:-40px;right:-40px;width:180px;height:180px;background:rgba(201,169,110,.1);border-radius:50%}
+.offer-label{color:var(--gold);font-size:.82rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:16px}
+.offer-box h2{color:var(--white);font-size:clamp(1.8rem,4.5vw,2.6rem);margin-bottom:16px}
+.offer-box p{color:rgba(255,255,255,.8);font-size:1rem;line-height:1.7;margin-bottom:32px}
+.offer-perks{display:flex;flex-direction:column;gap:10px;margin-bottom:36px;text-align:left}
+.perk{display:flex;gap:10px;align-items:center;color:rgba(255,255,255,.9);font-size:.95rem}
+.perk .check{color:var(--gold);font-size:1.1rem}
+.offer-price{margin-bottom:24px}
+.price-old{color:rgba(255,255,255,.45);font-size:1.1rem;text-decoration:line-through}
+.price-new{color:var(--gold);font-size:2.4rem;font-weight:900}
+.price-unit{color:rgba(255,255,255,.6);font-size:.9rem}
+
+/* FORM */
+.form-section{padding:70px 24px;max-width:640px;margin:0 auto}
+.form-box{background:var(--white);border-radius:24px;padding:48px 40px;box-shadow:0 8px 40px rgba(0,0,0,.1)}
+@media(max-width:600px){.form-box{padding:32px 24px}}
+.form-box h2{font-size:1.9rem;margin-bottom:8px}
+.form-box p{color:var(--text-gray);margin-bottom:28px}
+.form-group{margin-bottom:18px}
+.form-group label{display:block;font-weight:600;font-size:.9rem;margin-bottom:6px;color:var(--text)}
+.form-group input,.form-group select{width:100%;padding:14px 18px;border:2px solid #e8e8f0;border-radius:12px;font-size:1rem;font-family:'Be Vietnam Pro',sans-serif;transition:.2s;outline:none}
+.form-group input:focus,.form-group select:focus{border-color:var(--green-mid)}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:500px){.form-row{grid-template-columns:1fr}}
+.submit-btn{width:100%;background:var(--green);color:var(--white);padding:18px;border:none;border-radius:14px;font-size:1.05rem;font-weight:700;cursor:pointer;font-family:'Be Vietnam Pro',sans-serif;transition:.2s;margin-top:8px}
+.submit-btn:hover{background:var(--green-mid);transform:translateY(-1px)}
+.form-note{text-align:center;color:var(--text-gray);font-size:.8rem;margin-top:12px}
+
+/* FAQ */
+.faq{padding:60px 24px;max-width:760px;margin:0 auto}
+.faq-item{background:var(--white);border-radius:14px;margin-bottom:12px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,.05)}
+.faq-q{padding:20px 24px;font-weight:700;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-size:.95rem}
+.faq-q:hover{color:var(--green-mid)}
+.faq-a{padding:0 24px 20px;color:var(--text-gray);font-size:.9rem;line-height:1.7;display:none}
+.faq-a.open{display:block}
+.faq-arrow{transition:.2s;color:var(--green)}
+.faq-arrow.open{transform:rotate(180deg)}
+
+/* FOOTER */
+footer{background:var(--green);color:rgba(255,255,255,.7);padding:40px 24px;text-align:center}
+footer .logo{color:var(--gold);font-weight:800;font-size:1.3rem;margin-bottom:12px}
+footer p{font-size:.88rem;line-height:1.7}
+
+/* STICKY CTA */
+.sticky-cta{position:fixed;bottom:0;left:0;right:0;background:var(--green);padding:14px 24px;display:flex;align-items:center;justify-content:space-between;box-shadow:0 -4px 20px rgba(0,0,0,.2);z-index:99;transform:translateY(100%);transition:.3s}
+.sticky-cta.show{transform:translateY(0)}
+.sticky-text{color:var(--white);font-size:.9rem}
+.sticky-text b{color:var(--gold)}
+.sticky-btn{background:var(--gold);color:var(--green);padding:10px 24px;border-radius:24px;font-weight:800;font-size:.9rem;text-decoration:none;white-space:nowrap}
+
+/* ANIMATIONS */
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+.fade-up{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
+.fade-up.visible{opacity:1;transform:translateY(0)}
+
+@media(max-width:600px){
+  .trust-bar{gap:20px}
+  .offer-box{padding:36px 24px}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">🌾 Gạo Ông Điền</div>
+  <a href="#order" class="nav-cta">Đặt Mua Ngay</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-badge">Gạo Sinh Học ST24/ST25 — MISUN GROUP · Chứng nhận SGS & Eurofins</div>
+  <h1>Ăn Cơm Mà <span>Đường Huyết Không Tăng</span></h1>
+  <p class="hero-sub">Gạo Ông Điền — gạo sinh học công nghệ cao, kiểm nghiệm 0 glucose, 0 thuốc BVTV. Người tiểu đường, tim mạch, gout và ăn kiêng an tâm dùng mỗi ngày.</p>
+  <div class="hero-cta-wrap">
+    <a href="#order" class="btn-primary">🛒 Thử 7 Ngày — Freeship Toàn Quốc</a>
+    <a href="#features" class="btn-ghost">Tìm hiểu thêm ↓</a>
+  </div>
+  <p class="hero-note">✓ Chứng nhận SGS (Thụy Sỹ) + Eurofins (Châu Âu) &nbsp;·&nbsp; ✓ Hoàn tiền 100% &nbsp;·&nbsp; ✓ Giao hàng 1-3 ngày</p>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-item"><span class="icon">🏆</span><span>ST24/ST25 — <b>Top gạo ngon nhất thế giới</b></span></div>
+  <div class="trust-item"><span class="icon">🧬</span><span>Công nghệ <b>DDMS24 — 200+ thảo mộc</b></span></div>
+  <div class="trust-item"><span class="icon">🌿</span><span><b>0 glucose · 0 BVTV</b> (Kiểm nghiệm độc lập)</span></div>
+  <div class="trust-item"><span class="icon">🏅</span><span>Chứng nhận <b>SGS</b> (Thụy Sỹ) + <b>Eurofins</b> (Châu Âu)</span></div>
+  <div class="trust-item"><span class="icon">🦐</span><span>Lúa-Tôm <b>Bạc Liêu</b> thuần tự nhiên</span></div>
+</div>
+
+<!-- STATS -->
+<section class="stats">
+  <div class="stats-grid">
+    <div class="stat-card fade-up">
+      <div class="stat-num">0</div>
+      <div class="stat-label">Glucose & BVTV phát hiện — Chứng nhận SGS + Eurofins</div>
+    </div>
+    <div class="stat-card fade-up">
+      <div class="stat-num">48h</div>
+      <div class="stat-label">Cơm không ôi thiu — cấu trúc hạt ổn định tự nhiên</div>
+    </div>
+    <div class="stat-card fade-up">
+      <div class="stat-num">10+</div>
+      <div class="stat-label">Năm nghiên cứu tại Nhật Bản để tạo ra DDMS24</div>
+    </div>
+    <div class="stat-card fade-up">
+      <div class="stat-num">2035</div>
+      <div class="stat-label">Tầm nhìn phủ xanh nông nghiệp sạch toàn Việt Nam</div>
+    </div>
+  </div>
+</section>
+
+<!-- PROBLEM -->
+<section class="problem fade-up">
+  <div class="section-badge">Sự thật ít người biết</div>
+  <h2>Bát cơm bạn ăn mỗi ngày đang chứa những gì?</h2>
+  <p class="problem-lead">"Bát cơm bạn ăn mỗi ngày không chỉ là tinh bột — mà là cả một chuỗi can thiệp hóa học." Gạo tự nhiên không xấu. Vấn đề nằm ở cách canh tác hiện đại đang làm hỏng nó.</p>
+  <div class="problem-cards">
+    <div class="prob-card">
+      <div class="icon">🧪</div>
+      <h3>Chuỗi hóa chất từ đồng ruộng</h3>
+      <p>Trước gieo giống: thuốc diệt cỏ, diệt ốc (có nguồn gốc dioxin). Trong canh tác: thuốc cứng thân, trừ sâu, trừ rầy — phun đến sát ngày gặt. Sau thu hoạch: hun trùng, tẩm hương liệu, xạ trị.</p>
+    </div>
+    <div class="prob-card">
+      <div class="icon">📈</div>
+      <h3>Đường huyết tăng vọt sau mỗi bữa</h3>
+      <p>Gạo trắng đại trà = "mưa lớn": tinh bột phân giải nhanh → glucose vào máu ồ ạt. Người tiểu đường rất thèm cơm nhưng không dám ăn vì đường huyết tăng vọt, gây biến chứng mắt, thận, tim mạch.</p>
+    </div>
+    <div class="prob-card">
+      <div class="icon">🌍</div>
+      <h3>Đất bị "tàn phá" sau nhiều năm</h3>
+      <p>Phân hóa học dùng liên tục tiêu diệt vi sinh vật đất, đất chai cứng, nguồn nước ngầm ô nhiễm. Hệ quả: người nông dân càng ngày càng phụ thuộc hóa chất, chất lượng gạo càng đi xuống.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SOLUTION -->
+<section class="solution" id="features">
+  <div class="section-badge" style="background:rgba(201,169,110,.2);color:var(--gold);border:1px solid rgba(201,169,110,.3)">Giải pháp của MISUN GROUP</div>
+  <h2>Gạo Ông Điền — Khác biệt từ gốc rễ</h2>
+  <p>"Không phải cải tiến nông nghiệp — mà là quay về cách làm đúng." Sau 10 năm nghiên cứu tại Nhật Bản, đây là 6 khác biệt cốt lõi mà không gạo nào trên thị trường có được.</p>
+  <div class="features-grid">
+    <div class="feat-card">
+      <div class="feat-icon">🔬</div>
+      <h3>Momilactone A &amp; B — "Vi Chất Vàng"</h3>
+      <p>Hợp chất sinh học quý trong lớp cám gạo tự nhiên. Ức chế enzyme tiêu hóa tinh bột → đường vào máu từ từ ("mưa nhỏ"). Hỗ trợ giảm Triglyceride, LDL và acid uric.</p>
+    </div>
+    <div class="feat-card">
+      <div class="feat-icon">🏅</div>
+      <h3>Chứng Nhận SGS + Eurofins</h3>
+      <p>Kiểm nghiệm bởi 2 tổ chức quốc tế uy tín nhất: SGS (Thụy Sỹ — chuẩn FDA Mỹ) và Eurofins (Châu Âu). Kết quả: 0 glucose, 0 BVTV, 0 vi khuẩn gây bệnh.</p>
+    </div>
+    <div class="feat-card">
+      <div class="feat-icon">🧬</div>
+      <h3>DDMS24 — 200+ Thảo Mộc Tự Nhiên</h3>
+      <p>Dịch trích sinh học chiết xuất từ trái cây, thảo dược — công nghệ Nhật Bản. Nuôi cây từ rễ, tăng sức đề kháng tự nhiên. 1 quy trình: tạo DDMS24 (nuôi cây) + Biochar (nuôi đất).</p>
+    </div>
+    <div class="feat-card">
+      <div class="feat-icon">🦐</div>
+      <h3>Lúa-Tôm Bạc Liêu</h3>
+      <p>Luân phiên tự nhiên: mùa mặn nuôi tôm → mùa ngọt trồng lúa. Tôm làm sạch đất-nước, cắt vòng đời sâu bệnh. Cây lúa hấp thu khoáng chất tự nhiên từ đất đầm.</p>
+    </div>
+    <div class="feat-card">
+      <div class="feat-icon">⏱️</div>
+      <h3>"Người Khác Gặt Muộn — Chúng Tôi Gặt Sớm"</h3>
+      <p>Thu hoạch khi lúa chín 70-80%: hạn chế tích lũy tinh bột xấu, giữ hợp chất sinh học có lợi. Gạo thường để chín 90-100% để bán được nhiều hơn — chúng tôi chọn khác.</p>
+    </div>
+    <div class="feat-card">
+      <div class="feat-icon">✨</div>
+      <h3>Xát 1 Lần — Giữ Cám Nguyên Bản</h3>
+      <p>Giữ lớp cám chứa vitamin B, gamma-oryzanol và Momilactone. Không đánh bóng, không hóa chất bảo quản. Cơm không trắng đẹp hoàn hảo — nhưng dinh dưỡng nguyên vẹn.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ORIGIN -->
+<section style="padding:70px 24px">
+  <div class="origin fade-up">
+    <div class="origin-visual">
+      <h3>Hành trình từ<br>Đầm Tôm Cà Mau</h3>
+      <p>Mỗi hạt gạo Ông Điền đều có câu chuyện. Từ vùng đất ngập mặn giàu khoáng chất, qua bàn tay người nông dân canh tác thuận tự nhiên, đến bàn ăn của gia đình bạn.</p>
+      <div class="process-steps">
+        <div class="proc-step"><div class="proc-num">1</div><p>Đất được cải tạo bằng biochar (than hoạt tính) để trung hòa độc tố hóa học tồn dư</p></div>
+        <div class="proc-step"><div class="proc-num">2</div><p>Phun dịch trích DDMS24 định kỳ — nuôi cây, đuổi sâu bệnh hoàn toàn tự nhiên</p></div>
+        <div class="proc-step"><div class="proc-num">3</div><p>Kỹ thuật cắt lá lúa — tập trung dinh dưỡng nuôi bông lúa chắc khỏe</p></div>
+        <div class="proc-step"><div class="proc-num">4</div><p>Thu hoạch khi lúa chín 70-80%, xát 1 lần, đóng gói chân không ngay tại chỗ</p></div>
+      </div>
+    </div>
+    <div class="origin-text">
+      <div class="section-badge">Vùng nguyên liệu</div>
+      <h2>Mô hình Lúa-Tôm — Canh tác thuận tự nhiên</h2>
+      <p>Tôm nuôi ở đầm thải ra chất hữu cơ làm giàu đất. Lúa trồng trên nền đất đầm hấp thụ khoáng chất tự nhiên, phát triển khỏe mạnh mà không cần hóa chất.</p>
+      <p>Đây là mô hình canh tác kép được nông dân Cà Mau áp dụng hàng chục năm — nay được kết hợp với công nghệ DDMS24 để tạo ra sản phẩm chuẩn mực nhất.</p>
+      <div class="origin-highlights">
+        <div class="highlight"><div class="dot"></div><span>Vùng trồng: Cà Mau & Bạc Liêu</span></div>
+        <div class="highlight"><div class="dot"></div><span>Giống: ST24 & ST25 (Top ngon nhất thế giới)</span></div>
+        <div class="highlight"><div class="dot"></div><span>Công nghệ: DDMS24 — tiêu chuẩn Nhật Bản/New Zealand</span></div>
+        <div class="highlight"><div class="dot"></div><span>Đóng gói: Chân không tại vùng trồng, không chất bảo quản</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials">
+  <div class="sec-title fade-up">
+    <div class="section-badge">Khách hàng thực tế</div>
+    <h2>Họ đã thay đổi nhờ Gạo Ông Điền</h2>
+    <p>Không phải lời quảng cáo. Đây là trải nghiệm thật từ những người đã dùng sản phẩm.</p>
+  </div>
+  <div class="testi-grid fade-up">
+    <div class="testi-card">
+      <div class="stars">★★★★★</div>
+      <p class="testi-text">"Tôi bị tiểu đường type 2 hơn 5 năm, phải kiêng cơm hoàn toàn. Từ khi dùng Gạo Ông Điền, đường huyết sau ăn chỉ tăng nhẹ — bác sĩ cũng bất ngờ. Cơm dẻo, thơm, để nguội vẫn ngon. Cả gia đình giờ cũng chuyển sang dùng."</p>
+      <div class="testi-author">
+        <div class="author-avatar">T</div>
+        <div class="author-info">
+          <strong>Chú Tuấn, 58 tuổi</strong>
+          <span>TP. Hồ Chí Minh — Tiểu đường type 2</span>
+          <div class="verified">✓ Đã xác minh</div>
+        </div>
+      </div>
+    </div>
+    <div class="testi-card">
+      <div class="stars">★★★★★</div>
+      <p class="testi-text">"Bị gout nặng và huyết áp cao, bác sĩ dặn ăn kiêng nghiêm ngặt. Sau 2 tháng dùng Gạo Ông Điền: acid uric giảm rõ, ít đau khớp hơn hẳn. Quan trọng là ăn cơm được bình thường mà không lo — điều tôi không dám mơ trước đây."</p>
+      <div class="testi-author">
+        <div class="author-avatar">M</div>
+        <div class="author-info">
+          <strong>Chú Minh, 62 tuổi</strong>
+          <span>Hà Nội — Gout + Huyết áp cao</span>
+          <div class="verified">✓ Đã xác minh</div>
+        </div>
+      </div>
+    </div>
+    <div class="testi-card">
+      <div class="stars">★★★★★</div>
+      <p class="testi-text">"Mình đang eat clean giảm cân, thử 7 ngày gạo Ông Điền theo thử thách của nhóm Zalo. Bất ngờ: no lâu hơn hẳn, không thèm ăn vặt buổi chiều, cân giảm 1.5kg sau 1 tuần. Cơm nguội vẫn mềm ngon — thứ mình chưa thấy ở gạo nào."</p>
+      <div class="testi-author">
+        <div class="author-avatar">L</div>
+        <div class="author-info">
+          <strong>Chị Linh, 34 tuổi</strong>
+          <span>Đà Nẵng — Eat clean / Giảm cân</span>
+          <div class="verified">✓ Đã xác minh</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OFFER -->
+<section class="offer fade-up" id="offer">
+  <div class="offer-box">
+    <div class="offer-label">⚡ Ưu đãi đặc biệt — Thử nghiệm 7 ngày</div>
+    <h2>Thử 7 Ngày,<br>Cảm Nhận Sự Khác Biệt</h2>
+    <p>Đặt túi 2kg đầu tiên để trải nghiệm trực tiếp. Nếu không cảm nhận được sự khác biệt sau 7 ngày, hoàn tiền 100% — không hỏi lý do.</p>
+    <div class="offer-perks">
+      <div class="perk"><span class="check">✓</span><span>Gạo ST25 sinh học, không hóa chất, không glucose</span></div>
+      <div class="perk"><span class="check">✓</span><span>Freeship toàn quốc — giao trong 1-3 ngày làm việc</span></div>
+      <div class="perk"><span class="check">✓</span><span>Tặng kèm hướng dẫn nấu cơm chuẩn + Ebook thực dưỡng</span></div>
+      <div class="perk"><span class="check">✓</span><span>Tư vấn chuyên gia dinh dưỡng qua Zalo (miễn phí)</span></div>
+      <div class="perk"><span class="check">✓</span><span>Hoàn tiền 100% nếu không hài lòng</span></div>
+    </div>
+    <div class="offer-price">
+      <div class="price-old">238.000đ</div>
+      <div class="price-new">199.000đ <span style="font-size:1.2rem">/ túi 2kg</span></div>
+      <div class="price-unit">= 99.500đ/kg · Tiết kiệm 39.000đ so với giá niêm yết</div>
+    </div>
+    <a href="#order" class="btn-primary" style="display:inline-block">🛒 Đặt Mua Ngay — Freeship</a>
+  </div>
+</section>
+
+<!-- ORDER FORM -->
+<section class="form-section" id="order">
+  <div class="form-box fade-up">
+    <h2>Đặt Hàng Ngay</h2>
+    <p>Điền thông tin để nhận gạo trong 1-3 ngày làm việc. Freeship toàn quốc.</p>
+    <form id="orderForm" onsubmit="submitForm(event)">
+      <div class="form-row">
+        <div class="form-group">
+          <label>Họ và tên *</label>
+          <input type="text" id="name" placeholder="Nguyễn Văn A" required>
+        </div>
+        <div class="form-group">
+          <label>Số điện thoại *</label>
+          <input type="tel" id="phone" placeholder="0912 345 678" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Địa chỉ giao hàng *</label>
+        <input type="text" id="address" placeholder="Số nhà, tên đường, phường/xã, quận/huyện, tỉnh/thành" required>
+      </div>
+      <div class="form-group">
+        <label>Sản phẩm</label>
+        <select id="product">
+          <option value="trial">Gói Thử — 2kg ST25 (199.000đ, Freeship)</option>
+          <option value="5kg">Túi 5kg ST25 (595.000đ, Freeship)</option>
+          <option value="combo">Combo 2 túi 5kg (1.100.000đ, Freeship + Quà)</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Lý do quan tâm (để tư vấn tốt hơn)</label>
+        <select id="reason">
+          <option value="">-- Chọn lý do --</option>
+          <option value="diabetes">Bản thân/người thân bị tiểu đường</option>
+          <option value="diet">Đang ăn kiêng / giảm cân</option>
+          <option value="healthy">Muốn ăn sạch, sống khỏe</option>
+          <option value="heart">Bệnh tim mạch / huyết áp</option>
+          <option value="other">Lý do khác</option>
+        </select>
+      </div>
+      <button type="submit" class="submit-btn">🌾 Xác Nhận Đặt Hàng — Freeship</button>
+      <p class="form-note">🔒 Thông tin của bạn được bảo mật tuyệt đối · Thanh toán khi nhận hàng (COD)</p>
+    </form>
+  </div>
+</section>
+
+<!-- SUCCESS MESSAGE (hidden) -->
+<div id="successMsg" style="display:none;max-width:640px;margin:0 auto 60px;text-align:center;padding:48px 24px;background:var(--white);border-radius:24px;box-shadow:0 8px 40px rgba(0,0,0,.1)">
+  <div style="font-size:4rem;margin-bottom:16px">🎉</div>
+  <h2 style="font-size:1.8rem;margin-bottom:12px;color:var(--green)">Đặt hàng thành công!</h2>
+  <p style="color:var(--text-gray);line-height:1.7">Cảm ơn bạn đã đặt hàng. Đội ngũ Gạo Ông Điền sẽ liên hệ xác nhận qua số điện thoại trong vòng <b>30 phút</b>.<br><br>Trong thời gian chờ, hãy tham gia nhóm Zalo để nhận tư vấn miễn phí từ chuyên gia dinh dưỡng!</p>
+  <a href="https://zalo.me/gaoongdien" class="btn-primary" style="display:inline-block;margin-top:24px;background:var(--green)">💬 Tham gia nhóm Zalo</a>
+</div>
+
+<!-- FAQ -->
+<section class="faq fade-up">
+  <div class="sec-title"><h2>Câu hỏi thường gặp</h2></div>
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggleFaq(this)">Gạo Ông Điền có thực sự không có glucose không? <span class="faq-arrow">▼</span></div>
+    <div class="faq-a">Có. Gạo Ông Điền đã qua kiểm nghiệm độc lập tại phòng thí nghiệm được công nhận — kết quả: không phát hiện đường đơn glucose. Ngoài ra, sản phẩm còn có khả năng ức chế enzyme tiêu hóa tinh bột, làm chậm quá trình hấp thu đường vào máu, giúp giữ ổn định đường huyết sau bữa ăn.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggleFaq(this)">Cơm gạo Ông Điền nấu như gạo thường không? <span class="faq-arrow">▼</span></div>
+    <div class="faq-a">Hoàn toàn bình thường — nấu bằng nồi cơm điện thông thường. Tỷ lệ nước: 2 chén gạo — 1.5 chén nước (chặt hơn gạo thường). Lưu ý: vo nhẹ 1-2 lần, không chà xát mạnh để giữ lớp cám dinh dưỡng. Sau nấu xong, xới nhẹ và ủ thêm 10-15 phút — cơm sẽ dẻ, thơm và ổn định hơn.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggleFaq(this)">Người không bị tiểu đường có nên dùng không? <span class="faq-arrow">▼</span></div>
+    <div class="faq-a">Hoàn toàn phù hợp cho mọi người. Người ăn kiêng, muốn kiểm soát cân nặng, mẹ bầu, trẻ em, người cao tuổi — đều có thể sử dụng. Gạo Ông Điền đơn giản là lựa chọn tốt hơn về mặt dinh dưỡng so với gạo trắng thông thường.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggleFaq(this)">Chính sách hoàn tiền như thế nào? <span class="faq-arrow">▼</span></div>
+    <div class="faq-a">Chúng tôi cam kết hoàn tiền 100% trong vòng 7 ngày nếu bạn không hài lòng với sản phẩm — không cần giải thích lý do. Liên hệ qua Zalo hoặc hotline để được hỗ trợ trong vòng 30 phút.</div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="logo">🌾 Gạo Ông Điền</div>
+  <p>Gạo sinh học ST25 — Công nghệ DDMS24 — Lúa-Tôm Cà Mau<br>
+  Website: gaoongdien.com.vn · Facebook: /GaoOngDien · Shopee: shopee.vn/gaoongdien99<br>
+  Hotline & Zalo: Liên hệ qua fanpage để được hỗ trợ nhanh nhất</p>
+  <p style="margin-top:16px;font-size:.8rem;opacity:.5">© 2026 Gạo Ông Điền — Misun Group. All rights reserved.</p>
+</footer>
+
+<!-- STICKY CTA -->
+<div class="sticky-cta" id="stickyCta">
+  <div class="sticky-text">🌾 Gạo Ông Điền <b>Không Glucose</b> — Freeship toàn quốc</div>
+  <a href="#order" class="sticky-btn">Đặt mua ngay</a>
+</div>
+
+<script>
+// Scroll animations
+const obs = new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')});
+},{threshold:.15});
+document.querySelectorAll('.fade-up').forEach(el=>obs.observe(el));
+
+// Sticky CTA
+window.addEventListener('scroll',()=>{
+  const cta=document.getElementById('stickyCta');
+  if(window.scrollY>400)cta.classList.add('show');
+  else cta.classList.remove('show');
+});
+
+// FAQ toggle
+function toggleFaq(el){
+  const ans=el.nextElementSibling;
+  const arrow=el.querySelector('.faq-arrow');
+  const isOpen=ans.classList.contains('open');
+  document.querySelectorAll('.faq-a').forEach(a=>a.classList.remove('open'));
+  document.querySelectorAll('.faq-arrow').forEach(a=>a.classList.remove('open'));
+  if(!isOpen){ans.classList.add('open');arrow.classList.add('open');}
+}
+
+// Form submit
+function submitForm(e){
+  e.preventDefault();
+  const btn=document.querySelector('.submit-btn');
+  btn.textContent='Đang xử lý...';
+  btn.disabled=true;
+  setTimeout(()=>{
+    document.getElementById('orderForm').closest('.form-box').style.display='none';
+    document.getElementById('successMsg').style.display='block';
+    window.scrollTo({top:document.getElementById('successMsg').offsetTop-80,behavior:'smooth'});
+    // Here you would normally send data to your backend / CRM
+    console.log('Order:',{
+      name:document.getElementById('name').value,
+      phone:document.getElementById('phone').value,
+      address:document.getElementById('address').value,
+      product:document.getElementById('product').value,
+      reason:document.getElementById('reason').value
+    });
+  },1500);
+}
+</script>
+</body>
+</html>
