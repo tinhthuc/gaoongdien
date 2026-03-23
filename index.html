@@ -763,8 +763,13 @@
     }
 
     @media(max-width:600px) {
+      .form-section {
+        padding: 40px 1.5px
+      }
+
       .form-box {
-        padding: 32px 24px
+        padding: 32px 20px;
+        border-radius: 16px
       }
     }
 
@@ -926,7 +931,8 @@
       padding: 14px 24px;
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: center;
+      gap: 24px;
       box-shadow: 0 -4px 20px rgba(0, 0, 0, .2);
       z-index: 99;
       transform: translateY(100%);
@@ -986,8 +992,16 @@
         gap: 20px
       }
 
+      .badge-sep { display: none }
+      .badge-br  { display: block }
+
+      .offer {
+        padding: 40px 1.5px
+      }
+
       .offer-box {
-        padding: 36px 24px
+        padding: 36px 20px;
+        border-radius: 16px
       }
 
       .trust-label {
@@ -1023,7 +1037,7 @@
 
   <!-- HERO -->
   <section class="hero">
-    <div class="hero-badge">Gạo Ông Điền · Tinh hoa từ Sinh Học ST24/ST25 · Chứng nhận SGS & Eurofins</div>
+    <div class="hero-badge">Gạo Ông Điền<span class="badge-sep"> · </span><br class="badge-br">Tinh hoa từ Sinh Học ST24/ST25<span class="badge-sep"> · </span><br class="badge-br">Chứng nhận SGS &amp; Eurofins</div>
     <h1>Ăn Cơm Mà <span>Đường Huyết Không Tăng</span></h1>
     <p class="hero-sub">Gạo sinh học công nghệ cao, kiểm nghiệm 0 glucose, 0 thuốc BVTV.<br>Người tiểu đường, tim mạch,
       gout và ăn kiêng an tâm dùng mỗi ngày.</p>
@@ -1313,7 +1327,7 @@
         </div>
         <div class="form-group">
           <label>Địa chỉ giao hàng *</label>
-          <input type="text" id="address" placeholder="Số nhà, tên đường, phường/xã, quận/huyện, tỉnh/thành" required>
+          <input type="text" id="address" placeholder="Số nhà, tên đường, phường/xã, tỉnh/thành" required>
         </div>
         <div class="form-group">
           <label>Sản phẩm</label>
