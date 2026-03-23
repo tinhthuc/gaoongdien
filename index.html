@@ -1,520 +1,884 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gạo Ông Điền — Gạo Sinh Học Không Glucose | Dành Cho Người Tiểu Đường</title>
-<meta name="description" content="Gạo Ông Điền ST25 sinh học — không glucose, tinh bột thấp. Ăn cơm mà đường huyết không tăng. Thử 7 ngày, hoàn tiền nếu không hài lòng.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
-<style>
-html{scroll-behavior:smooth}
-*{margin:0;padding:0;box-sizing:border-box}
-:root{
-  --green:#1a4a2e;--green-mid:#2d7a4f;--green-light:#4CAF76;
-  --gold:#c9a96e;--gold-dark:#a07c45;
-  --cream:#faf7f0;--cream-dark:#f0ead8;
-  --text:#1a1a2e;--text-gray:#5a5a6e;
-  --white:#ffffff;--red:#e53935;
-}
-body{font-family:'Be Vietnam Pro',sans-serif;color:var(--text);background:var(--cream);overflow-x:hidden}
-h1,h2,h3{font-family:'Playfair Display',serif}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Khảo sát nhu cầu chuyển đổi số doanh nghiệp | SYNITY</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-/* NAV */
-nav{background:var(--green);padding:14px 24px;display:flex;align-items:center;justify-content:space-between}
-.nav-logo{color:var(--gold);font-weight:800;font-size:1.1rem;letter-spacing:.5px;white-space:nowrap}
-.nav-cta{background:var(--gold);color:var(--green);padding:8px 20px;border-radius:24px;font-weight:700;font-size:.9rem;text-decoration:none;transition:.2s}
-.nav-cta:hover{background:#e8c47e}
+    :root {
+      --primary: #6C63FF;
+      --primary-dark: #5A52D5;
+      --primary-light: #8B85FF;
+      --accent: #FF6584;
+      --bg: #0F0F1A;
+      --surface: #1A1A2E;
+      --surface2: #16213E;
+      --border: rgba(108, 99, 255, 0.2);
+      --text: #E8E8F0;
+      --text-muted: #9090B0;
+      --success: #4CAF50;
+      --error: #FF5252;
+      --radius: 12px;
+      --shadow: 0 8px 32px rgba(108, 99, 255, 0.15);
+    }
 
-/* HERO */
-.hero{background:linear-gradient(135deg,var(--green) 0%,#2d6b45 60%,#1a4a2e 100%);padding:70px 24px 80px;text-align:center;position:relative;overflow:hidden}
-.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")}
-.hero-badge{display:inline-block;background:rgba(201,169,110,.2);border:1px solid var(--gold);color:var(--gold);padding:6px 18px;border-radius:24px;font-size:.8rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;margin-bottom:20px}
-.hero h1{color:var(--white);font-size:clamp(2rem,6vw,3.4rem);line-height:1.2;max-width:800px;margin:0 auto 16px}
-.hero h1 span{color:var(--gold)}
-.hero-sub{color:rgba(255,255,255,.8);font-size:1.1rem;max-width:600px;margin:0 auto 32px;line-height:1.7}
-.hero-cta-wrap{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
-.btn-primary{background:var(--gold);color:var(--green);padding:16px 36px;border-radius:40px;font-weight:800;font-size:1.05rem;text-decoration:none;display:inline-block;transition:.25s;box-shadow:0 8px 30px rgba(201,169,110,.4)}
-.btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 40px rgba(201,169,110,.5)}
-.btn-ghost{border:2px solid rgba(255,255,255,.5);color:var(--white);padding:14px 28px;border-radius:40px;font-weight:600;font-size:1rem;text-decoration:none;transition:.2s}
-.btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
-.hero-note{color:rgba(255,255,255,.55);font-size:.82rem;margin-top:14px}
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      background-image: radial-gradient(ellipse at 20% 50%, rgba(108, 99, 255, 0.07) 0%, transparent 60%),
+        radial-gradient(ellipse at 80% 20%, rgba(255, 101, 132, 0.05) 0%, transparent 50%);
+    }
 
-/* TRUST BAR */
-.trust-bar{background:var(--green);border-top:1px solid rgba(255,255,255,.1);padding:20px 24px;display:flex;justify-content:center;gap:40px;flex-wrap:wrap}
-.trust-item{display:flex;align-items:center;gap:8px;color:rgba(255,255,255,.85);font-size:.9rem}
-.trust-item span.icon{font-size:1.2rem}
-.trust-item b{color:var(--gold)}
+    .header {
+      background: linear-gradient(135deg, var(--surface) 0%, var(--surface2) 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 20px 0;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(10px);
+    }
 
-/* STATS */
-.stats{background:var(--cream-dark);padding:50px 24px;text-align:center}
-.stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:24px;max-width:900px;margin:0 auto}
-.stat-card{background:var(--white);border-radius:16px;padding:28px 20px;box-shadow:0 4px 20px rgba(0,0,0,.06)}
-.stat-num{font-size:2.4rem;font-weight:900;color:var(--green);line-height:1}
-.stat-label{color:var(--text-gray);font-size:.88rem;margin-top:6px}
+    .header-inner {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
 
-/* PROBLEM */
-.problem{padding:70px 24px;max-width:960px;margin:0 auto}
-.section-badge{display:inline-block;background:rgba(26,74,46,.08);color:var(--green-mid);padding:5px 16px;border-radius:20px;font-size:.78rem;font-weight:700;letter-spacing:.8px;text-transform:uppercase;margin-bottom:16px}
-.problem h2{font-size:clamp(1.7rem,4vw,2.6rem);margin-bottom:16px;color:var(--text)}
-.problem-lead{font-size:1.05rem;color:var(--text-gray);line-height:1.8;margin-bottom:40px}
-.problem-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
-.prob-card{background:var(--white);border-radius:16px;padding:28px;border-left:4px solid var(--red)}
-.prob-card .icon{font-size:2rem;margin-bottom:12px}
-.prob-card h3{font-family:'Be Vietnam Pro',sans-serif;font-size:1rem;font-weight:700;margin-bottom:8px;color:var(--text)}
-.prob-card p{font-size:.9rem;color:var(--text-gray);line-height:1.6}
+    .logo {
+      font-size: 22px;
+      font-weight: 800;
+      background: linear-gradient(135deg, var(--primary-light), var(--accent));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      letter-spacing: 2px;
+    }
 
-/* SOLUTION */
-.solution{background:var(--green);padding:70px 24px;text-align:center}
-.solution h2{color:var(--white);font-size:clamp(1.8rem,4.5vw,2.8rem);margin-bottom:16px}
-.solution p{color:rgba(255,255,255,.8);max-width:640px;margin:0 auto 48px;font-size:1.05rem;line-height:1.7}
-.features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;max-width:1000px;margin:0 auto}
-.feat-card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:28px 22px;text-align:left;transition:.2s}
-.feat-card:hover{background:rgba(255,255,255,.12);transform:translateY(-3px)}
-.feat-icon{font-size:2rem;margin-bottom:14px}
-.feat-card h3{color:var(--gold);font-family:'Be Vietnam Pro',sans-serif;font-size:1rem;font-weight:700;margin-bottom:10px}
-.feat-card p{color:rgba(255,255,255,.75);font-size:.88rem;line-height:1.6}
+    .logo-sub {
+      font-size: 11px;
+      color: var(--text-muted);
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-top: 2px;
+    }
 
-/* ORIGIN */
-.origin{padding:70px 24px;max-width:1000px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
-@media(max-width:700px){.origin{grid-template-columns:1fr}}
-.origin-visual{background:linear-gradient(145deg,#2d7a4f,#1a4a2e);border-radius:24px;padding:40px;text-align:center;position:relative;overflow:hidden}
-.origin-visual::before{content:'🌾';font-size:8rem;opacity:.12;position:absolute;right:-10px;bottom:-10px}
-.origin-visual h3{color:var(--gold);font-size:1.6rem;margin-bottom:12px}
-.origin-visual p{color:rgba(255,255,255,.8);font-size:.95rem;line-height:1.7}
-.process-steps{display:flex;flex-direction:column;gap:16px;margin-top:24px}
-.proc-step{display:flex;gap:14px;align-items:flex-start;background:rgba(255,255,255,.08);border-radius:12px;padding:14px}
-.proc-num{background:var(--gold);color:var(--green);width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.85rem;flex-shrink:0}
-.proc-step p{color:rgba(255,255,255,.85);font-size:.88rem;line-height:1.5}
-.origin-text h2{font-size:clamp(1.7rem,4vw,2.4rem);margin-bottom:16px}
-.origin-text p{color:var(--text-gray);line-height:1.8;margin-bottom:20px}
-.origin-highlights{display:flex;flex-direction:column;gap:10px}
-.highlight{display:flex;gap:10px;align-items:center;font-size:.95rem}
-.highlight .dot{width:8px;height:8px;background:var(--green-mid);border-radius:50%;flex-shrink:0}
+    .progress-wrap {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 20px 20px 0;
+    }
 
-/* TESTIMONIALS */
-.testimonials{background:var(--cream-dark);padding:70px 24px}
-.sec-title{text-align:center;margin-bottom:48px}
-.sec-title h2{font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:12px}
-.sec-title p{color:var(--text-gray);max-width:560px;margin:0 auto}
-.testi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;max-width:1000px;margin:0 auto}
-.testi-card{background:var(--white);border-radius:20px;padding:32px;box-shadow:0 4px 24px rgba(0,0,0,.07)}
-.stars{color:var(--gold);font-size:1.1rem;margin-bottom:14px;letter-spacing:2px}
-.testi-text{font-size:.95rem;color:var(--text);line-height:1.7;margin-bottom:20px;font-style:italic}
-.testi-author{display:flex;align-items:center;gap:12px}
-.author-avatar{width:44px;height:44px;border-radius:50%;background:var(--green);display:flex;align-items:center;justify-content:center;color:var(--white);font-weight:700;font-size:1.1rem}
-.author-info strong{display:block;font-size:.95rem}
-.author-info span{color:var(--text-gray);font-size:.82rem}
-.verified{display:inline-flex;align-items:center;gap:4px;background:rgba(76,175,118,.1);color:var(--green-mid);font-size:.72rem;font-weight:600;padding:2px 8px;border-radius:10px;margin-top:4px}
+    .progress-bar-outer {
+      background: var(--surface);
+      border-radius: 100px;
+      height: 6px;
+      overflow: hidden;
+    }
 
-/* OFFER */
-.offer{padding:70px 24px;max-width:760px;margin:0 auto;text-align:center}
-.offer-box{background:var(--green);border-radius:24px;padding:52px 40px;position:relative;overflow:hidden}
-.offer-box::before{content:'';position:absolute;top:-40px;right:-40px;width:180px;height:180px;background:rgba(201,169,110,.1);border-radius:50%}
-.offer-label{color:var(--gold);font-size:.82rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:16px}
-.offer-box h2{color:var(--white);font-size:clamp(1.8rem,4.5vw,2.6rem);margin-bottom:16px}
-.offer-box p{color:rgba(255,255,255,.8);font-size:1rem;line-height:1.7;margin-bottom:32px}
-.offer-perks{display:flex;flex-direction:column;gap:10px;margin-bottom:36px;text-align:left}
-.perk{display:flex;gap:10px;align-items:center;color:rgba(255,255,255,.9);font-size:.95rem}
-.perk .check{color:var(--gold);font-size:1.1rem}
-.offer-price{margin-bottom:24px}
-.price-old{color:rgba(255,255,255,.45);font-size:1.1rem;text-decoration:line-through}
-.price-new{color:var(--gold);font-size:2.4rem;font-weight:900}
-.price-unit{color:rgba(255,255,255,.6);font-size:.9rem}
+    .progress-bar-inner {
+      height: 100%;
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+      border-radius: 100px;
+      transition: width 0.5s cubic-bezier(.4, 0, .2, 1);
+    }
 
-/* FORM */
-.form-section{padding:70px 24px;max-width:640px;margin:0 auto}
-.form-box{background:var(--white);border-radius:24px;padding:48px 40px;box-shadow:0 8px 40px rgba(0,0,0,.1)}
-@media(max-width:600px){.form-box{padding:32px 24px}}
-.form-box h2{font-size:1.9rem;margin-bottom:8px}
-.form-box p{color:var(--text-gray);margin-bottom:28px}
-.form-group{margin-bottom:18px}
-.form-group label{display:block;font-weight:600;font-size:.9rem;margin-bottom:6px;color:var(--text)}
-.form-group input,.form-group select{width:100%;padding:14px 18px;border:2px solid #e8e8f0;border-radius:12px;font-size:1rem;font-family:'Be Vietnam Pro',sans-serif;transition:.2s;outline:none}
-.form-group input:focus,.form-group select:focus{border-color:var(--green-mid)}
-.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-@media(max-width:500px){.form-row{grid-template-columns:1fr}}
-.submit-btn{width:100%;background:var(--green);color:var(--white);padding:18px;border:none;border-radius:14px;font-size:1.05rem;font-weight:700;cursor:pointer;font-family:'Be Vietnam Pro',sans-serif;transition:.2s;margin-top:8px}
-.submit-btn:hover{background:var(--green-mid);transform:translateY(-1px)}
-.form-note{text-align:center;color:var(--text-gray);font-size:.8rem;margin-top:12px}
+    .progress-info {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 8px;
+      font-size: 12px;
+      color: var(--text-muted);
+    }
 
-/* FAQ */
-.faq{padding:60px 24px;max-width:760px;margin:0 auto}
-.faq-item{background:var(--white);border-radius:14px;margin-bottom:12px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,.05)}
-.faq-q{padding:20px 24px;font-weight:700;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-size:.95rem}
-.faq-q:hover{color:var(--green-mid)}
-.faq-a{padding:0 24px 20px;color:var(--text-gray);font-size:.9rem;line-height:1.7;display:none}
-.faq-a.open{display:block}
-.faq-arrow{transition:.2s;color:var(--green)}
-.faq-arrow.open{transform:rotate(180deg)}
+    .card {
+      max-width: 700px;
+      margin: 24px auto;
+      padding: 0 20px;
+    }
 
-/* FOOTER */
-footer{background:var(--green);color:rgba(255,255,255,.7);padding:40px 24px;text-align:center}
-footer .logo{color:var(--gold);font-weight:800;font-size:1.3rem;margin-bottom:12px}
-footer p{font-size:.88rem;line-height:1.7}
+    .card-inner {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 36px;
+      box-shadow: var(--shadow);
+      animation: fadeSlide 0.4s ease;
+    }
 
-/* STICKY CTA */
-.sticky-cta{position:fixed;bottom:0;left:0;right:0;background:var(--green);padding:14px 24px;display:flex;align-items:center;justify-content:space-between;box-shadow:0 -4px 20px rgba(0,0,0,.2);z-index:99;transform:translateY(100%);transition:.3s}
-.sticky-cta.show{transform:translateY(0)}
-.sticky-text{color:var(--white);font-size:.9rem}
-.sticky-text b{color:var(--gold)}
-.sticky-btn{background:var(--gold);color:var(--green);padding:10px 24px;border-radius:24px;font-weight:800;font-size:.9rem;text-decoration:none;white-space:nowrap}
+    @keyframes fadeSlide {
+      from {
+        opacity: 0;
+        transform: translateY(16px)
+      }
 
-/* ANIMATIONS */
-@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
-.fade-up{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
-.fade-up.visible{opacity:1;transform:translateY(0)}
+      to {
+        opacity: 1;
+        transform: translateY(0)
+      }
+    }
 
-@media(max-width:600px){
-  .trust-bar{gap:20px}
-  .offer-box{padding:36px 24px}
-}
-</style>
+    .intro-badge {
+      text-align: center;
+      display: block;
+  '<div class="intro-desc"><strong>ChÃ o má»«ng anh chá»‹ Ä‘áº¿n vá»›i SYNITY!</strong></div>' +
+  '<div class="intro-desc">SYNITY mong muá»‘n mang Ä‘áº¿n nhá»¯ng gÃ³c nhÃ¬n tÆ° váº¥n phÃ¹ há»£p vÃ  sÃ¡t vá»›i nhu cáº§u thá»±c táº¿ cá»§a doanh nghiá»‡p, tÆ°Æ¡ng xá»©ng vá»›i thá»i gian anh chá»‹ Ä‘Ã£ dÃ nh cho chÃºng tÃ´i. VÃ¬ váº­y, ráº¥t mong anh chá»‹ dÃ nh Ã­t phÃºt Ä‘á»ƒ hoÃ n thÃ nh cÃ¡c cÃ¢u há»i dÆ°á»›i Ä‘Ã¢y.</div>' +
+  '<div class="intro-desc">Nhá»¯ng thÃ´ng tin anh chá»‹ cung cáº¥p sáº½ lÃ  dá»¯ liá»‡u quan trá»ng giÃºp SYNITY thá»±c hiá»‡n kháº£o sÃ¡t sÆ¡ bá»™ vÃ  chuáº©n bá»‹ phÆ°Æ¡ng Ã¡n tÆ° váº¥n/demo phÃ¹ há»£p nháº¥t vá»›i tÃ¬nh hÃ¬nh doanh nghiá»‡p.</div>' +
+  '<div class="intro-desc">TrÃ¢n trá»ng cáº£m Æ¡n anh chá»‹ Ä‘Ã£ tin tÆ°á»Ÿng vÃ  liÃªn há»‡ vá»›i SYNITY.</div>' +
+      color: var(--primary-light);
+      font-weight: 600;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .intro-title {
+      font-size: 26px;
+      font-weight: 800;
+      line-height: 1.3;
+      margin-bottom: 16px;
+      text-align: center;
+      background: linear-gradient(135deg, #fff 40%, var(--primary-light));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .intro-desc {
+      color: var(--text-muted);
+      line-height: 1.7;
+      font-size: 15px;
+      margin-bottom: 24px;
+    }
+
+    .intro-features {
+      display: grid;
+      gap: 10px;
+      margin-bottom: 28px;
+    }
+
+    .intro-feat {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    .intro-feat span.icon {
+      width: 32px;
+      height: 32px;
+      background: rgba(108, 99, 255, 0.15);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      flex-shrink: 0;
+    }
+
+    .section-title {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 6px;
+      color: #fff;
+    }
+
+    .section-title .step-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 700;
+      margin-right: 10px;
+    }
+
+    .section-desc {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 28px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .field {
+      margin-bottom: 22px;
+    }
+
+    .field-label {
+      display: block;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+
+    .required {
+      color: var(--accent);
+      margin-left: 3px;
+    }
+
+    .field-hint {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 5px;
+    }
+
+    input[type=text],
+    input[type=email],
+    input[type=tel],
+    textarea,
+    select {
+      width: 100%;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1.5px solid rgba(255, 255, 255, 0.08);
+      border-radius: var(--radius);
+      padding: 12px 16px;
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      transition: border-color .2s, box-shadow .2s, background .2s;
+      outline: none;
+      appearance: none;
+      -webkit-appearance: none;
+    }
+
+    input[type=text]:focus,
+    input[type=email]:focus,
+    input[type=tel]:focus,
+    textarea:focus,
+    select:focus {
+      border-color: var(--primary);
+      background: rgba(108, 99, 255, 0.06);
+      box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.12);
+    }
+
+    input.error,
+    textarea.error,
+    select.error {
+      border-color: var(--error) !important;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 90px;
+    }
+
+    select {
+      cursor: pointer;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%239090B0' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 14px center;
+      padding-right: 40px;
+    }
+
+    select option {
+      background: var(--surface2);
+      color: var(--text);
+    }
+
+    .options-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .option-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 16px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1.5px solid rgba(255, 255, 255, 0.07);
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all .2s;
+      font-size: 14px;
+      color: var(--text-muted);
+      user-select: none;
+    }
+
+    .option-item:hover {
+      border-color: rgba(108, 99, 255, 0.4);
+      background: rgba(108, 99, 255, 0.06);
+      color: var(--text);
+    }
+
+    .option-item input[type=radio],
+    .option-item input[type=checkbox] {
+      display: none;
+    }
+
+    .option-item .dot {
+      width: 18px;
+      height: 18px;
+      border: 2px solid rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      flex-shrink: 0;
+      transition: all .2s;
+      position: relative;
+    }
+
+    .option-item input[type=checkbox]+.dot {
+      border-radius: 5px;
+    }
+
+    .option-item.selected {
+      border-color: var(--primary);
+      background: rgba(108, 99, 255, 0.12);
+      color: var(--text);
+    }
+
+    .option-item.selected .dot {
+      background: var(--primary);
+      border-color: var(--primary);
+    }
+
+    .option-item.selected .dot::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 6px;
+      height: 6px;
+      background: #fff;
+      border-radius: 50%;
+    }
+
+    .option-item.selected input[type=checkbox]+.dot::after {
+      content: '✓';
+      font-size: 11px;
+      font-weight: 700;
+      border-radius: 0;
+      width: auto;
+      height: auto;
+      background: transparent;
+      color: #fff;
+    }
+
+    .fields-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    @media(max-width:560px) {
+      .fields-row {
+        grid-template-columns: 1fr
+      }
+
+      .card-inner {
+        padding: 24px 20px
+      }
+
+      .intro-title {
+        font-size: 20px
+      }
+    }
+
+    .btn-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 32px;
+      gap: 12px;
+    }
+
+    .btn {
+      padding: 14px 32px;
+      border-radius: var(--radius);
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      border: none;
+      transition: all .2s;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      color: #fff;
+      box-shadow: 0 4px 20px rgba(108, 99, 255, 0.4);
+      flex: 1;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(108, 99, 255, 0.5);
+    }
+
+    .btn-primary:active {
+      transform: translateY(0);
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.07);
+      color: var(--text-muted);
+      border: 1px solid var(--border);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.12);
+      color: var(--text);
+    }
+
+    .btn:disabled {
+      opacity: .5;
+      cursor: not-allowed;
+      transform: none !important;
+    }
+
+    .success-wrap {
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    .success-icon {
+      font-size: 64px;
+      margin-bottom: 20px;
+      animation: pop .5s cubic-bezier(.2, 1.6, .6, 1);
+    }
+
+    @keyframes pop {
+      from {
+        transform: scale(0)
+      }
+
+      to {
+        transform: scale(1)
+      }
+    }
+
+    .success-title {
+      font-size: 26px;
+      font-weight: 800;
+      margin-bottom: 12px;
+      color: #fff;
+    }
+
+    .success-desc {
+      color: var(--text-muted);
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    .field-error {
+      color: var(--error);
+      font-size: 12px;
+      margin-top: 5px;
+      display: none;
+    }
+
+    .field-error.show {
+      display: block;
+    }
+
+    .loading-spin {
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      border-top-color: #fff;
+      border-radius: 50%;
+      animation: spin .7s linear infinite;
+      margin-right: 8px;
+      vertical-align: middle;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg)
+      }
+    }
+
+    .branch-tag {
+      display: inline-block;
+      padding: 4px 12px;
+      background: rgba(108, 99, 255, 0.15);
+      border: 1px solid rgba(108, 99, 255, 0.3);
+      border-radius: 100px;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--primary-light);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 16px;
+    }
+
+    .other-input-wrap {
+      margin-top: 10px;
+      display: none;
+    }
+
+    .other-input-wrap.show {
+      display: block;
+    }
+  </style>
 </head>
+
 <body>
 
-<!-- NAV -->
-<nav>
-  <div class="nav-logo">🌾 Gạo Ông Điền</div>
-  <a href="#order" class="nav-cta">Đặt Mua Ngay</a>
-</nav>
-
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-badge">Gạo Sinh Học ST24/ST25 — MISUN GROUP · Chứng nhận SGS & Eurofins</div>
-  <h1>Ăn Cơm Mà <span>Đường Huyết Không Tăng</span></h1>
-  <p class="hero-sub">Gạo Ông Điền — gạo sinh học công nghệ cao, kiểm nghiệm 0 glucose, 0 thuốc BVTV. Người tiểu đường, tim mạch, gout và ăn kiêng an tâm dùng mỗi ngày.</p>
-  <div class="hero-cta-wrap">
-    <a href="#order" class="btn-primary">🛒 Thử 7 Ngày — Freeship Toàn Quốc</a>
-    <a href="#features" class="btn-ghost">Tìm hiểu thêm ↓</a>
-  </div>
-  <p class="hero-note">✓ Chứng nhận SGS (Thụy Sỹ) + Eurofins (Châu Âu) &nbsp;·&nbsp; ✓ Hoàn tiền 100% &nbsp;·&nbsp; ✓ Giao hàng 1-3 ngày</p>
-</section>
-
-<!-- TRUST BAR -->
-<div class="trust-bar">
-  <div class="trust-item"><span class="icon">🏆</span><span>ST24/ST25 — <b>Top gạo ngon nhất thế giới</b></span></div>
-  <div class="trust-item"><span class="icon">🧬</span><span>Công nghệ <b>DDMS24 — 200+ thảo mộc</b></span></div>
-  <div class="trust-item"><span class="icon">🌿</span><span><b>0 glucose · 0 BVTV</b> (Kiểm nghiệm độc lập)</span></div>
-  <div class="trust-item"><span class="icon">🏅</span><span>Chứng nhận <b>SGS</b> (Thụy Sỹ) + <b>Eurofins</b> (Châu Âu)</span></div>
-  <div class="trust-item"><span class="icon">🦐</span><span>Lúa-Tôm <b>Bạc Liêu</b> thuần tự nhiên</span></div>
-</div>
-
-<!-- STATS -->
-<section class="stats">
-  <div class="stats-grid">
-    <div class="stat-card fade-up">
-      <div class="stat-num">0</div>
-      <div class="stat-label">Glucose & BVTV phát hiện — Chứng nhận SGS + Eurofins</div>
-    </div>
-    <div class="stat-card fade-up">
-      <div class="stat-num">48h</div>
-      <div class="stat-label">Cơm không ôi thiu — cấu trúc hạt ổn định tự nhiên</div>
-    </div>
-    <div class="stat-card fade-up">
-      <div class="stat-num">10+</div>
-      <div class="stat-label">Năm nghiên cứu tại Nhật Bản để tạo ra DDMS24</div>
-    </div>
-    <div class="stat-card fade-up">
-      <div class="stat-num">2035</div>
-      <div class="stat-label">Tầm nhìn phủ xanh nông nghiệp sạch toàn Việt Nam</div>
+  <div class="header">
+    <div class="header-inner">
+      <div class="logo">SYNITY</div>
+      <div class="logo-sub">Digital Transformation</div>
     </div>
   </div>
-</section>
 
-<!-- PROBLEM -->
-<section class="problem fade-up">
-  <div class="section-badge">Sự thật ít người biết</div>
-  <h2>Bát cơm bạn ăn mỗi ngày đang chứa những gì?</h2>
-  <p class="problem-lead">"Bát cơm bạn ăn mỗi ngày không chỉ là tinh bột — mà là cả một chuỗi can thiệp hóa học." Gạo tự nhiên không xấu. Vấn đề nằm ở cách canh tác hiện đại đang làm hỏng nó.</p>
-  <div class="problem-cards">
-    <div class="prob-card">
-      <div class="icon">🧪</div>
-      <h3>Chuỗi hóa chất từ đồng ruộng</h3>
-      <p>Trước gieo giống: thuốc diệt cỏ, diệt ốc (có nguồn gốc dioxin). Trong canh tác: thuốc cứng thân, trừ sâu, trừ rầy — phun đến sát ngày gặt. Sau thu hoạch: hun trùng, tẩm hương liệu, xạ trị.</p>
+  <div class="progress-wrap" id="progressWrap" style="display:none">
+    <div class="progress-bar-outer">
+      <div class="progress-bar-inner" id="progressBar" style="width:0%"></div>
     </div>
-    <div class="prob-card">
-      <div class="icon">📈</div>
-      <h3>Đường huyết tăng vọt sau mỗi bữa</h3>
-      <p>Gạo trắng đại trà = "mưa lớn": tinh bột phân giải nhanh → glucose vào máu ồ ạt. Người tiểu đường rất thèm cơm nhưng không dám ăn vì đường huyết tăng vọt, gây biến chứng mắt, thận, tim mạch.</p>
-    </div>
-    <div class="prob-card">
-      <div class="icon">🌍</div>
-      <h3>Đất bị "tàn phá" sau nhiều năm</h3>
-      <p>Phân hóa học dùng liên tục tiêu diệt vi sinh vật đất, đất chai cứng, nguồn nước ngầm ô nhiễm. Hệ quả: người nông dân càng ngày càng phụ thuộc hóa chất, chất lượng gạo càng đi xuống.</p>
-    </div>
+    <div class="progress-info"><span id="progressLabel">Bước 1</span><span id="progressPct">0%</span></div>
   </div>
-</section>
 
-<!-- SOLUTION -->
-<section class="solution" id="features">
-  <div class="section-badge" style="background:rgba(201,169,110,.2);color:var(--gold);border:1px solid rgba(201,169,110,.3)">Giải pháp của MISUN GROUP</div>
-  <h2>Gạo Ông Điền — Khác biệt từ gốc rễ</h2>
-  <p>"Không phải cải tiến nông nghiệp — mà là quay về cách làm đúng." Sau 10 năm nghiên cứu tại Nhật Bản, đây là 6 khác biệt cốt lõi mà không gạo nào trên thị trường có được.</p>
-  <div class="features-grid">
-    <div class="feat-card">
-      <div class="feat-icon">🔬</div>
-      <h3>Momilactone A &amp; B — "Vi Chất Vàng"</h3>
-      <p>Hợp chất sinh học quý trong lớp cám gạo tự nhiên. Ức chế enzyme tiêu hóa tinh bột → đường vào máu từ từ ("mưa nhỏ"). Hỗ trợ giảm Triglyceride, LDL và acid uric.</p>
-    </div>
-    <div class="feat-card">
-      <div class="feat-icon">🏅</div>
-      <h3>Chứng Nhận SGS + Eurofins</h3>
-      <p>Kiểm nghiệm bởi 2 tổ chức quốc tế uy tín nhất: SGS (Thụy Sỹ — chuẩn FDA Mỹ) và Eurofins (Châu Âu). Kết quả: 0 glucose, 0 BVTV, 0 vi khuẩn gây bệnh.</p>
-    </div>
-    <div class="feat-card">
-      <div class="feat-icon">🧬</div>
-      <h3>DDMS24 — 200+ Thảo Mộc Tự Nhiên</h3>
-      <p>Dịch trích sinh học chiết xuất từ trái cây, thảo dược — công nghệ Nhật Bản. Nuôi cây từ rễ, tăng sức đề kháng tự nhiên. 1 quy trình: tạo DDMS24 (nuôi cây) + Biochar (nuôi đất).</p>
-    </div>
-    <div class="feat-card">
-      <div class="feat-icon">🦐</div>
-      <h3>Lúa-Tôm Bạc Liêu</h3>
-      <p>Luân phiên tự nhiên: mùa mặn nuôi tôm → mùa ngọt trồng lúa. Tôm làm sạch đất-nước, cắt vòng đời sâu bệnh. Cây lúa hấp thu khoáng chất tự nhiên từ đất đầm.</p>
-    </div>
-    <div class="feat-card">
-      <div class="feat-icon">⏱️</div>
-      <h3>"Người Khác Gặt Muộn — Chúng Tôi Gặt Sớm"</h3>
-      <p>Thu hoạch khi lúa chín 70-80%: hạn chế tích lũy tinh bột xấu, giữ hợp chất sinh học có lợi. Gạo thường để chín 90-100% để bán được nhiều hơn — chúng tôi chọn khác.</p>
-    </div>
-    <div class="feat-card">
-      <div class="feat-icon">✨</div>
-      <h3>Xát 1 Lần — Giữ Cám Nguyên Bản</h3>
-      <p>Giữ lớp cám chứa vitamin B, gamma-oryzanol và Momilactone. Không đánh bóng, không hóa chất bảo quản. Cơm không trắng đẹp hoàn hảo — nhưng dinh dưỡng nguyên vẹn.</p>
-    </div>
+  <div class="card">
+    <div class="card-inner" id="mainCard"></div>
   </div>
-</section>
 
-<!-- ORIGIN -->
-<section style="padding:70px 24px">
-  <div class="origin fade-up">
-    <div class="origin-visual">
-      <h3>Hành trình từ<br>Đầm Tôm Cà Mau</h3>
-      <p>Mỗi hạt gạo Ông Điền đều có câu chuyện. Từ vùng đất ngập mặn giàu khoáng chất, qua bàn tay người nông dân canh tác thuận tự nhiên, đến bàn ăn của gia đình bạn.</p>
-      <div class="process-steps">
-        <div class="proc-step"><div class="proc-num">1</div><p>Đất được cải tạo bằng biochar (than hoạt tính) để trung hòa độc tố hóa học tồn dư</p></div>
-        <div class="proc-step"><div class="proc-num">2</div><p>Phun dịch trích DDMS24 định kỳ — nuôi cây, đuổi sâu bệnh hoàn toàn tự nhiên</p></div>
-        <div class="proc-step"><div class="proc-num">3</div><p>Kỹ thuật cắt lá lúa — tập trung dinh dưỡng nuôi bông lúa chắc khỏe</p></div>
-        <div class="proc-step"><div class="proc-num">4</div><p>Thu hoạch khi lúa chín 70-80%, xát 1 lần, đóng gói chân không ngay tại chỗ</p></div>
-      </div>
-    </div>
-    <div class="origin-text">
-      <div class="section-badge">Vùng nguyên liệu</div>
-      <h2>Mô hình Lúa-Tôm — Canh tác thuận tự nhiên</h2>
-      <p>Tôm nuôi ở đầm thải ra chất hữu cơ làm giàu đất. Lúa trồng trên nền đất đầm hấp thụ khoáng chất tự nhiên, phát triển khỏe mạnh mà không cần hóa chất.</p>
-      <p>Đây là mô hình canh tác kép được nông dân Cà Mau áp dụng hàng chục năm — nay được kết hợp với công nghệ DDMS24 để tạo ra sản phẩm chuẩn mực nhất.</p>
-      <div class="origin-highlights">
-        <div class="highlight"><div class="dot"></div><span>Vùng trồng: Cà Mau & Bạc Liêu</span></div>
-        <div class="highlight"><div class="dot"></div><span>Giống: ST24 & ST25 (Top ngon nhất thế giới)</span></div>
-        <div class="highlight"><div class="dot"></div><span>Công nghệ: DDMS24 — tiêu chuẩn Nhật Bản/New Zealand</span></div>
-        <div class="highlight"><div class="dot"></div><span>Đóng gói: Chân không tại vùng trồng, không chất bảo quản</span></div>
-      </div>
-    </div>
-  </div>
-</section>
+  <script>
+    // ============================================================
+    // ⚠️ ĐỔI URL NÀY thành URL Deploy của Apps Script
+    // Sau khi deploy Code.gs lên Apps Script, copy URL exec vào đây
+    // ============================================================
+    var APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwphhFKbw_1UiAWL4FKo0gisGJLCJmAzFY6dQQTVqgMb5dWu1V7Kq4pvGg3UFvQrNDi/exec';
 
-<!-- TESTIMONIALS -->
-<section class="testimonials">
-  <div class="sec-title fade-up">
-    <div class="section-badge">Khách hàng thực tế</div>
-    <h2>Họ đã thay đổi nhờ Gạo Ông Điền</h2>
-    <p>Không phải lời quảng cáo. Đây là trải nghiệm thật từ những người đã dùng sản phẩm.</p>
-  </div>
-  <div class="testi-grid fade-up">
-    <div class="testi-card">
-      <div class="stars">★★★★★</div>
-      <p class="testi-text">"Tôi bị tiểu đường type 2 hơn 5 năm, phải kiêng cơm hoàn toàn. Từ khi dùng Gạo Ông Điền, đường huyết sau ăn chỉ tăng nhẹ — bác sĩ cũng bất ngờ. Cơm dẻo, thơm, để nguội vẫn ngon. Cả gia đình giờ cũng chuyển sang dùng."</p>
-      <div class="testi-author">
-        <div class="author-avatar">T</div>
-        <div class="author-info">
-          <strong>Chú Tuấn, 58 tuổi</strong>
-          <span>TP. Hồ Chí Minh — Tiểu đường type 2</span>
-          <div class="verified">✓ Đã xác minh</div>
-        </div>
-      </div>
-    </div>
-    <div class="testi-card">
-      <div class="stars">★★★★★</div>
-      <p class="testi-text">"Bị gout nặng và huyết áp cao, bác sĩ dặn ăn kiêng nghiêm ngặt. Sau 2 tháng dùng Gạo Ông Điền: acid uric giảm rõ, ít đau khớp hơn hẳn. Quan trọng là ăn cơm được bình thường mà không lo — điều tôi không dám mơ trước đây."</p>
-      <div class="testi-author">
-        <div class="author-avatar">M</div>
-        <div class="author-info">
-          <strong>Chú Minh, 62 tuổi</strong>
-          <span>Hà Nội — Gout + Huyết áp cao</span>
-          <div class="verified">✓ Đã xác minh</div>
-        </div>
-      </div>
-    </div>
-    <div class="testi-card">
-      <div class="stars">★★★★★</div>
-      <p class="testi-text">"Mình đang eat clean giảm cân, thử 7 ngày gạo Ông Điền theo thử thách của nhóm Zalo. Bất ngờ: no lâu hơn hẳn, không thèm ăn vặt buổi chiều, cân giảm 1.5kg sau 1 tuần. Cơm nguội vẫn mềm ngon — thứ mình chưa thấy ở gạo nào."</p>
-      <div class="testi-author">
-        <div class="author-avatar">L</div>
-        <div class="author-info">
-          <strong>Chị Linh, 34 tuổi</strong>
-          <span>Đà Nẵng — Eat clean / Giảm cân</span>
-          <div class="verified">✓ Đã xác minh</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+    var state = { step: 0, branch: null, data: {} };
+    var TOTAL_STEPS = 6;
 
-<!-- OFFER -->
-<section class="offer fade-up" id="offer">
-  <div class="offer-box">
-    <div class="offer-label">⚡ Ưu đãi đặc biệt — Thử nghiệm 7 ngày</div>
-    <h2>Thử 7 Ngày,<br>Cảm Nhận Sự Khác Biệt</h2>
-    <p>Đặt túi 2kg đầu tiên để trải nghiệm trực tiếp. Nếu không cảm nhận được sự khác biệt sau 7 ngày, hoàn tiền 100% — không hỏi lý do.</p>
-    <div class="offer-perks">
-      <div class="perk"><span class="check">✓</span><span>Gạo ST25 sinh học, không hóa chất, không glucose</span></div>
-      <div class="perk"><span class="check">✓</span><span>Freeship toàn quốc — giao trong 1-3 ngày làm việc</span></div>
-      <div class="perk"><span class="check">✓</span><span>Tặng kèm hướng dẫn nấu cơm chuẩn + Ebook thực dưỡng</span></div>
-      <div class="perk"><span class="check">✓</span><span>Tư vấn chuyên gia dinh dưỡng qua Zalo (miễn phí)</span></div>
-      <div class="perk"><span class="check">✓</span><span>Hoàn tiền 100% nếu không hài lòng</span></div>
-    </div>
-    <div class="offer-price">
-      <div class="price-old">238.000đ</div>
-      <div class="price-new">199.000đ <span style="font-size:1.2rem">/ túi 2kg</span></div>
-      <div class="price-unit">= 99.500đ/kg · Tiết kiệm 39.000đ so với giá niêm yết</div>
-    </div>
-    <a href="#order" class="btn-primary" style="display:inline-block">🛒 Đặt Mua Ngay — Freeship</a>
-  </div>
-</section>
+    function getProgressPct() { return state.step === 0 ? 0 : Math.round((state.step / (TOTAL_STEPS - 1)) * 100); }
 
-<!-- ORDER FORM -->
-<section class="form-section" id="order">
-  <div class="form-box fade-up">
-    <h2>Đặt Hàng Ngay</h2>
-    <p>Điền thông tin để nhận gạo trong 1-3 ngày làm việc. Freeship toàn quốc.</p>
-    <form id="orderForm" onsubmit="submitForm(event)">
-      <div class="form-row">
-        <div class="form-group">
-          <label>Họ và tên *</label>
-          <input type="text" id="name" placeholder="Nguyễn Văn A" required>
-        </div>
-        <div class="form-group">
-          <label>Số điện thoại *</label>
-          <input type="tel" id="phone" placeholder="0912 345 678" required>
-        </div>
-      </div>
-      <div class="form-group">
-        <label>Địa chỉ giao hàng *</label>
-        <input type="text" id="address" placeholder="Số nhà, tên đường, phường/xã, quận/huyện, tỉnh/thành" required>
-      </div>
-      <div class="form-group">
-        <label>Sản phẩm</label>
-        <select id="product">
-          <option value="trial">Gói Thử — 2kg ST25 (199.000đ, Freeship)</option>
-          <option value="5kg">Túi 5kg ST25 (595.000đ, Freeship)</option>
-          <option value="combo">Combo 2 túi 5kg (1.100.000đ, Freeship + Quà)</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label>Lý do quan tâm (để tư vấn tốt hơn)</label>
-        <select id="reason">
-          <option value="">-- Chọn lý do --</option>
-          <option value="diabetes">Bản thân/người thân bị tiểu đường</option>
-          <option value="diet">Đang ăn kiêng / giảm cân</option>
-          <option value="healthy">Muốn ăn sạch, sống khỏe</option>
-          <option value="heart">Bệnh tim mạch / huyết áp</option>
-          <option value="other">Lý do khác</option>
-        </select>
-      </div>
-      <button type="submit" class="submit-btn">🌾 Xác Nhận Đặt Hàng — Freeship</button>
-      <p class="form-note">🔒 Thông tin của bạn được bảo mật tuyệt đối · Thanh toán khi nhận hàng (COD)</p>
-    </form>
-  </div>
-</section>
+    function render() {
+      var card = document.getElementById('mainCard');
+      var prog = document.getElementById('progressWrap');
+      prog.style.display = state.step === 0 ? 'none' : 'block';
+      document.getElementById('progressBar').style.width = getProgressPct() + '%';
+      document.getElementById('progressLabel').textContent = 'Bước ' + state.step + ' / ' + (TOTAL_STEPS - 1);
+      document.getElementById('progressPct').textContent = getProgressPct() + '%';
+      var html = '';
+      switch (state.step) {
+        case 0: html = renderIntro(); break;
+        case 1: html = renderContact(); break;
+        case 2: html = renderBusiness(); break;
+        case 3: html = renderOperations(); break;
+        case 4: html = renderBranch(); break;
+        case 5: html = renderSuccess(); break;
+        default: html = renderIntro();
+      }
+      card.innerHTML = html;
+      attachListeners();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
 
-<!-- SUCCESS MESSAGE (hidden) -->
-<div id="successMsg" style="display:none;max-width:640px;margin:0 auto 60px;text-align:center;padding:48px 24px;background:var(--white);border-radius:24px;box-shadow:0 8px 40px rgba(0,0,0,.1)">
-  <div style="font-size:4rem;margin-bottom:16px">🎉</div>
-  <h2 style="font-size:1.8rem;margin-bottom:12px;color:var(--green)">Đặt hàng thành công!</h2>
-  <p style="color:var(--text-gray);line-height:1.7">Cảm ơn bạn đã đặt hàng. Đội ngũ Gạo Ông Điền sẽ liên hệ xác nhận qua số điện thoại trong vòng <b>30 phút</b>.<br><br>Trong thời gian chờ, hãy tham gia nhóm Zalo để nhận tư vấn miễn phí từ chuyên gia dinh dưỡng!</p>
-  <a href="https://zalo.me/gaoongdien" class="btn-primary" style="display:inline-block;margin-top:24px;background:var(--green)">💬 Tham gia nhóm Zalo</a>
-</div>
+    function renderIntro() {
+      return '<div class="intro-badge">🚀 Khảo sát miễn phí</div>' +
+        '<div class="intro-title">Khảo sát nhu cầu<br>chuyển đổi số doanh nghiệp</div>' +
+        '<div class="intro-desc"><strong>Chào mừng anh chị đến với SYNITY!</strong></div>' +
+        '<div class="intro-desc">SYNITY mong muốn mang đến những góc nhìn tư vấn phù hợp và sát với nhu cầu thực tế của doanh nghiệp, tương xứng với thời gian anh chị đã dành cho chúng tôi. Vì vậy, rất mong anh chị dành ít phút để hoàn thành các câu hỏi dưới đây.</div>' +
+        '<div class="intro-desc">Những thông tin anh chị cung cấp sẽ là dữ liệu quan trọng giúp SYNITY thực hiện khảo sát sơ bộ và chuẩn bị phương án tư vấn/demo phù hợp nhất với tình hình doanh nghiệp.</div>' +
+        '<div class="intro-desc"><em>Trân trọng cảm ơn anh chị đã tin tưởng và liên hệ với SYNITY.</em></div>' +
+        '<button class="btn btn-primary" style="width:100%" onclick="nextStep()">Bắt đầu khảo sát →</button>';
+    }
+    function feat(icon, text) { return '<div class="intro-feat"><span class="icon">' + icon + '</span>' + text + '</div>'; }
 
-<!-- FAQ -->
-<section class="faq fade-up">
-  <div class="sec-title"><h2>Câu hỏi thường gặp</h2></div>
-  <div class="faq-item">
-    <div class="faq-q" onclick="toggleFaq(this)">Gạo Ông Điền có thực sự không có glucose không? <span class="faq-arrow">▼</span></div>
-    <div class="faq-a">Có. Gạo Ông Điền đã qua kiểm nghiệm độc lập tại phòng thí nghiệm được công nhận — kết quả: không phát hiện đường đơn glucose. Ngoài ra, sản phẩm còn có khả năng ức chế enzyme tiêu hóa tinh bột, làm chậm quá trình hấp thu đường vào máu, giúp giữ ổn định đường huyết sau bữa ăn.</div>
-  </div>
-  <div class="faq-item">
-    <div class="faq-q" onclick="toggleFaq(this)">Cơm gạo Ông Điền nấu như gạo thường không? <span class="faq-arrow">▼</span></div>
-    <div class="faq-a">Hoàn toàn bình thường — nấu bằng nồi cơm điện thông thường. Tỷ lệ nước: 2 chén gạo — 1.5 chén nước (chặt hơn gạo thường). Lưu ý: vo nhẹ 1-2 lần, không chà xát mạnh để giữ lớp cám dinh dưỡng. Sau nấu xong, xới nhẹ và ủ thêm 10-15 phút — cơm sẽ dẻ, thơm và ổn định hơn.</div>
-  </div>
-  <div class="faq-item">
-    <div class="faq-q" onclick="toggleFaq(this)">Người không bị tiểu đường có nên dùng không? <span class="faq-arrow">▼</span></div>
-    <div class="faq-a">Hoàn toàn phù hợp cho mọi người. Người ăn kiêng, muốn kiểm soát cân nặng, mẹ bầu, trẻ em, người cao tuổi — đều có thể sử dụng. Gạo Ông Điền đơn giản là lựa chọn tốt hơn về mặt dinh dưỡng so với gạo trắng thông thường.</div>
-  </div>
-  <div class="faq-item">
-    <div class="faq-q" onclick="toggleFaq(this)">Chính sách hoàn tiền như thế nào? <span class="faq-arrow">▼</span></div>
-    <div class="faq-a">Chúng tôi cam kết hoàn tiền 100% trong vòng 7 ngày nếu bạn không hài lòng với sản phẩm — không cần giải thích lý do. Liên hệ qua Zalo hoặc hotline để được hỗ trợ trong vòng 30 phút.</div>
-  </div>
-</section>
+    function renderContact() {
+      return sectionHeader('1', 'Thông tin liên hệ', 'Để chúng tôi có thể liên hệ tư vấn phù hợp với bạn') +
+        fieldsRow(textField('hoTen', 'Họ tên', true, state.data.hoTen || ''), selectField('danhXung', 'Danh xưng', true, ['Anh', 'Chị'], state.data.danhXung || '')) +
+        textField('email', 'Email', true, state.data.email || '', 'email') +
+        textField('phone', 'Số điện thoại', true, state.data.phone || '', 'tel') +
+        textField('facebook', 'Facebook cá nhân', false, state.data.facebook || '', 'text', 'Vui lòng điền link Facebook cá nhân của anh/chị') +
+        selectField('vaiTro', 'Vai trò', true, ['Chủ sở hữu', 'Giám đốc khối', 'Trưởng phòng', 'Chuyên gia/Chuyên viên'], state.data.vaiTro || '') +
+        radioField('bietDen', 'Anh/chị biết đến SYNITY (hoặc Chinh Dang) từ đâu?', true,
+          ['Facebook Chinh Dang', 'Bạn bè giới thiệu', 'Google Search', 'Mục khác'], state.data.bietDen || '') +
+        otherField('bietDen', 'Mục khác', state.data.bietDenKhac || '') +
+        btnRow(null, 'Tiếp theo →', true);
+    }
 
-<!-- FOOTER -->
-<footer>
-  <div class="logo">🌾 Gạo Ông Điền</div>
-  <p>Gạo sinh học ST25 — Công nghệ DDMS24 — Lúa-Tôm Cà Mau<br>
-  Website: gaoongdien.com.vn · Facebook: /GaoOngDien · Shopee: shopee.vn/gaoongdien99<br>
-  Hotline & Zalo: Liên hệ qua fanpage để được hỗ trợ nhanh nhất</p>
-  <p style="margin-top:16px;font-size:.8rem;opacity:.5">© 2026 Gạo Ông Điền — Misun Group. All rights reserved.</p>
-</footer>
+    function renderBusiness() {
+      return sectionHeader('2', 'Thông tin doanh nghiệp', 'Giúp chúng tôi hiểu hơn về quy mô và ngành hoạt động') +
+        textField('tenDN', 'Tên doanh nghiệp', false, state.data.tenDN || '') +
+        textField('maSoThue', 'Mã số thuế doanh nghiệp', true, state.data.maSoThue || '') +
+        textField('website', 'Website hoặc Facebook công ty', false, state.data.website || '', 'text', 'Nếu không có, vui lòng điền "không có"') +
+        selectField('soNhanSu', 'Số lượng nhân sự', true, ['0 - 5', '6 - 50', '51 - 100', '101 - 250', '251 - 500', '501 - 1000', '1000+'], state.data.soNhanSu || '') +
+        selectField('nganhNghe', 'Ngành nghề', true,
+          ['Giáo dục - Đào tạo', 'Thương mại', 'Bán lẻ', 'Spa Beauty', 'Nha khoa', 'Cơ sở chăm sóc sức khoẻ', 'Bất Động Sản', 'Bảo Hiểm', 'Tài Chính', 'Dịch vụ chuyên nghiệp', 'Du lịch lữ hành', 'Khác'],
+          state.data.nganhNghe || '') +
+        textField('doanhThu', 'Doanh thu trung bình năm (tỷ/năm)', true, state.data.doanhThu || '') +
+        btnRow('← Quay lại', 'Tiếp theo →', true);
+    }
 
-<!-- STICKY CTA -->
-<div class="sticky-cta" id="stickyCta">
-  <div class="sticky-text">🌾 Gạo Ông Điền <b>Không Glucose</b> — Freeship toàn quốc</div>
-  <a href="#order" class="sticky-btn">Đặt mua ngay</a>
-</div>
+    function renderOperations() {
+      return sectionHeader('3', 'Thực trạng vận hành & Giải pháp', 'Phân tích hiện trạng và định hướng giải pháp phù hợp') +
+        checkboxField('khoKhan', 'Những khó khăn lớn nhất trong vận hành?', true,
+          ['Quản lý khách hàng rời rạc', 'Mất dữ liệu', 'Khó theo dõi hiệu suất', 'Quy trình thiếu đồng bộ', 'Phối hợp phòng ban chưa hiệu quả', 'Mục khác'],
+          state.data.khoKhan || []) +
+        otherField('khoKhan', 'Khó khăn khác', state.data.khoKhanKhac || '') +
+        textField('vanDeCapBach', 'Vấn đề cấp bách nhất cần giải quyết trong 3 tháng tới?', true, state.data.vanDeCapBach || '') +
+        textareaField('congCuHienTai', 'Công cụ/Phần mềm hiện đang sử dụng?', true, state.data.congCuHienTai || '', 'CRM, giao việc, kế toán, CSKH, Marketing…') +
+        textareaField('haiLong', 'Điều hài lòng nhất với công cụ hiện tại?', true, state.data.haiLong || '') +
+        textareaField('chuaHaiLong', 'Điều chưa hài lòng hoặc còn hạn chế?', true, state.data.chuaHaiLong || '') +
+        textareaField('kyVong', 'Kỳ vọng hệ thống mới cải thiện điều gì rõ rệt nhất?', true, state.data.kyVong || '') +
+        textareaField('tieuChi', 'Tiêu chí quan trọng nhất khi lựa chọn đơn vị đồng hành?', true, state.data.tieuChi || '') +
+        checkboxField('giaiPhapQuanTam', 'Các giải pháp quan tâm của SYNITY?', false,
+          ['01. Cộng tác nội bộ', '02. Hồ sơ khách hàng 360', '03. Hợp nhất kênh truyền thông',
+            '04. Chuẩn hoá chốt sale', '05. Quản lý thanh toán', '06. Hoá đơn VAT',
+            '07. Đo lường quảng cáo', '08. Quản lý Booking', '09. Đồng bộ Facebook Dataset',
+            '10. Báo cáo BI', '11. Quy trình phê duyệt', '12. AI Agent', '13. Văn phòng không giấy', 'Mục khác'],
+          state.data.giaiPhapQuanTam || []) +
+        otherField('giaiPhapQuanTam', 'Giải pháp khác', state.data.giaiPhapKhac || '') +
+        radioField('nhomGiaiPhap', 'Nhóm giải pháp quan tâm hiện tại?', true,
+          ['(Full hệ thống) Giải pháp quản trị tổng thể doanh nghiệp',
+            '(CRM) Giải pháp quản lý khách hàng & bán hàng',
+            '(Task) Giải pháp quản lý công việc & quy trình'],
+          state.data.nhomGiaiPhap || '') +
+        btnRow('← Quay lại', 'Tiếp theo →', true);
+    }
 
-<script>
-// Scroll animations
-const obs = new IntersectionObserver(entries=>{
-  entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')});
-},{threshold:.15});
-document.querySelectorAll('.fade-up').forEach(el=>obs.observe(el));
+    function renderBranch() {
+      var nhom = state.data.nhomGiaiPhap || '';
+      if (nhom.indexOf('Full') !== -1) { state.branch = 'full'; return renderBranchFull(); }
+      if (nhom.indexOf('CRM') !== -1) { state.branch = 'crm'; return renderBranchCRM(); }
+      if (nhom.indexOf('Task') !== -1) { state.branch = 'task'; return renderBranchTask(); }
+      return renderBranchFull();
+    }
 
-// Sticky CTA
-window.addEventListener('scroll',()=>{
-  const cta=document.getElementById('stickyCta');
-  if(window.scrollY>400)cta.classList.add('show');
-  else cta.classList.remove('show');
-});
+    function renderBranchFull() {
+      return '<div class="branch-tag">🏢 Full Hệ Thống</div>' +
+        sectionHeader('4', 'Hệ thống quản trị toàn diện', 'Khảo sát chuyên sâu về nhu cầu triển khai hệ thống tổng thể') +
+        checkboxField('boPhanSoHoa', 'Bộ phận muốn số hóa?', true, ['Bán hàng', 'Marketing', 'CSKH', 'Vận hành', 'Nhân sự', 'Kế toán', 'Khác'], state.data.boPhanSoHoa || []) +
+        otherField('boPhanSoHoa', 'Bộ phận khác', state.data.boPhanKhac || '') +
+        radioField('quyTrinhChuan', 'Đã có quy trình chuẩn chưa?', true, ['Đã có nhưng chưa số hóa', 'Đang vận hành theo kinh nghiệm', 'Chưa có quy trình rõ ràng'], state.data.quyTrinhChuan || '') +
+        radioField('sanSangThayDoi', 'Mức độ sẵn sàng thay đổi của nhân sự?', true, ['Rất sẵn sàng', 'Cần đào tạo thêm', 'Còn e ngại'], state.data.sanSangThayDoi || '') +
+        radioField('kyVongThayDoi', 'Kỳ vọng thay đổi rõ nhất?', true, ['Giảm phụ thuộc cá nhân', 'Mở rộng quy mô', 'Kiểm soát chi phí', 'Tăng năng suất', 'Phối hợp dễ dàng hơn', 'Mục khác'], state.data.kyVongThayDoi || '') +
+        otherField('kyVongThayDoi', 'Kỳ vọng khác', state.data.kyVongThayDoiKhac || '') +
+        textareaField('mucTieuToanDien', 'Mục tiêu lớn nhất khi triển khai hệ thống tổng thể?', true, state.data.mucTieuToanDien || '') +
+        btnRow('← Quay lại', 'Gửi khảo sát 🚀', true);
+    }
 
-// FAQ toggle
-function toggleFaq(el){
-  const ans=el.nextElementSibling;
-  const arrow=el.querySelector('.faq-arrow');
-  const isOpen=ans.classList.contains('open');
-  document.querySelectorAll('.faq-a').forEach(a=>a.classList.remove('open'));
-  document.querySelectorAll('.faq-arrow').forEach(a=>a.classList.remove('open'));
-  if(!isOpen){ans.classList.add('open');arrow.classList.add('open');}
-}
+    function renderBranchCRM() {
+      return '<div class="branch-tag">💼 CRM</div>' +
+        sectionHeader('4', 'Hệ thống CRM', 'Khảo sát chuyên sâu về quản lý khách hàng & bán hàng') +
+        radioField('quanLyKhachHang', 'Cách quản lý dữ liệu khách hàng hiện tại?', true, ['Excel', 'Facebook/Zalo', 'Phần mềm khác', 'Nhân viên tự quản', 'Mục khác'], state.data.quanLyKhachHang || '') +
+        otherField('quanLyKhachHang', 'Cách quản lý khác', state.data.quanLyKhachHangKhac || '') +
+        checkboxField('vanDeKhau', 'Vấn đề lớn ở khâu nào?', true, ['Mất Lead', 'Không theo dõi được tiến độ', 'Không đo lường hiệu quả sales', 'Chăm sóc sau bán kém', 'Quy trình lộn xộn', 'Mục khác'], state.data.vanDeKhau || []) +
+        otherField('vanDeKhau', 'Vấn đề khác', state.data.vanDeKhauKhac || '') +
+        radioField('soNhanSuSales', 'Số lượng nhân sự Sales?', true, ['1 - 4', '5 - 10', 'Trên 10'], state.data.soNhanSuSales || '') +
+        radioField('quyTrinhBanHang', 'Quy trình bán hàng đã chuẩn hóa chưa?', true, ['Chưa có', 'Có nhưng mỗi người làm mỗi kiểu', 'Có nhưng chưa đo lường được'], state.data.quyTrinhBanHang || '') +
+        radioField('chiSoCaiThien', 'Chỉ số muốn cải thiện nhất?', true, ['Số lượng Lead', 'Tỷ lệ chốt deal', 'Tốc độ phản hồi', 'Doanh thu từ khách cũ', 'Mục khác'], state.data.chiSoCaiThien || '') +
+        otherField('chiSoCaiThien', 'Chỉ số khác', state.data.chiSoKhac || '') +
+        btnRow('← Quay lại', 'Gửi khảo sát 🚀', true);
+    }
 
-// Form submit
-function submitForm(e){
-  e.preventDefault();
-  const btn=document.querySelector('.submit-btn');
-  btn.textContent='Đang xử lý...';
-  btn.disabled=true;
-  setTimeout(()=>{
-    document.getElementById('orderForm').closest('.form-box').style.display='none';
-    document.getElementById('successMsg').style.display='block';
-    window.scrollTo({top:document.getElementById('successMsg').offsetTop-80,behavior:'smooth'});
-    // Here you would normally send data to your backend / CRM
-    console.log('Order:',{
-      name:document.getElementById('name').value,
-      phone:document.getElementById('phone').value,
-      address:document.getElementById('address').value,
-      product:document.getElementById('product').value,
-      reason:document.getElementById('reason').value
-    });
-  },1500);
-}
-</script>
+    function renderBranchTask() {
+      return '<div class="branch-tag">📋 Task Management</div>' +
+        sectionHeader('4', 'Quản trị công việc & Quy trình', 'Khảo sát chuyên sâu về quản lý công việc nội bộ') +
+        checkboxField('giaoViecHienTai', 'Cách giao việc hiện tại?', true, ['Zalo', 'Excel', 'Email', 'Khác'], state.data.giaoViecHienTai || []) +
+        otherField('giaoViecHienTai', 'Cách giao việc khác', state.data.giaoViecKhac || '') +
+        radioField('vanDeGiaoViec', 'Vấn đề khi giao việc?', false, ['Không kiểm soát tiến độ', 'Quên việc/trễ deadline', 'Thiếu minh bạch', 'Báo cáo thủ công', 'Mục khác'], state.data.vanDeGiaoViec || '') +
+        radioField('soCapQuanLy', 'Số cấp quản lý cần theo dõi?', false, ['1 cấp', '2 cấp', 'Trên 2 cấp'], state.data.soCapQuanLy || '') +
+        textField('kyVongQuanLyCongViec', 'Kỳ vọng lớn nhất khi áp dụng quản lý công việc?', true, state.data.kyVongQuanLyCongViec || '') +
+        btnRow('← Quay lại', 'Gửi khảo sát 🚀', true);
+    }
+
+    function renderSuccess() {
+      var name = (state.data.danhXung || '') + ' ' + (state.data.hoTen || '');
+      return '<div class="success-wrap">' +
+        '<div class="success-icon">🎉</div>' +
+        '<div class="success-title">Cảm ơn ' + name.trim() + ' đã hoàn thành khảo sát!</div>' +
+        '<div class="success-desc">Hệ thống SYNITY đã nhận được thông tin khảo sát của ' + (state.data.danhXung || '') + '.<br>Đội ngũ SYNITY sẽ liên hệ trong vòng <strong>24h</strong> để tư vấn và sắp xếp demo giải pháp phù hợp.<br><br>Trong thời gian chờ đợi, hãy theo dõi <a href="https://www.facebook.com/dangdinhchinh" target="_blank" style="color:var(--primary-light);text-decoration:none;font-weight:600;">Facebook Chinh Dang</a> để cập nhật các kiến thức chuyển đổi số mới nhất!</div>' +
+        '</div>';
+    }
+
+    // ---- FIELD BUILDERS ----
+    function textField(name, label, required, value, type, hint) {
+      type = type || 'text';
+      return '<div class="field" id="f_' + name + '">' +
+        '<label class="field-label">' + label + (required ? '<span class="required">*</span>' : '') + '</label>' +
+        '<input type="' + type + '" id="' + name + '" value="' + esc(value) + '" placeholder="Nhập ' + label.toLowerCase() + '">' +
+        (hint ? '<div class="field-hint">' + hint + '</div>' : '') +
+        '<div class="field-error" id="err_' + name + '">Vui lòng điền thông tin này</div>' +
+        '</div>';
+    }
+    function textareaField(name, label, required, value, placeholder) {
+      return '<div class="field" id="f_' + name + '">' +
+        '<label class="field-label">' + label + (required ? '<span class="required">*</span>' : '') + '</label>' +
+        '<textarea id="' + name + '" placeholder="' + esc(placeholder || 'Nhập câu trả lời của bạn...') + '">' + esc(value) + '</textarea>' +
+        '<div class="field-error" id="err_' + name + '">Vui lòng điền thông tin này</div>' +
+        '</div>';
+    }
+    function selectField(name, label, required, options, value) {
+      var opts = '<option value="">-- Chọn --</option>';
+      options.forEach(function (o) { opts += '<option value="' + esc(o) + '"' + (o === value ? ' selected' : '') + '>' + o + '</option>'; });
+      return '<div class="field" id="f_' + name + '">' +
+        '<label class="field-label">' + label + (required ? '<span class="required">*</span>' : '') + '</label>' +
+        '<select id="' + name + '">' + opts + '</select>' +
+        '<div class="field-error" id="err_' + name + '">Vui lòng chọn một mục</div>' +
+        '</div>';
+    }
+    function radioField(name, label, required, options, value) {
+      var items = '';
+      options.forEach(function (o) {
+        var sel = o === value ? ' selected' : '';
+        items += '<label class="option-item' + sel + '" onclick="selectOption(event,this,\'' + name + '\',false)">' +
+          '<input type="radio" name="' + name + '" value="' + esc(o) + '"' + (o === value ? ' checked' : '') + '>' +
+          '<span class="dot"></span>' + o + '</label>';
+      });
+      return '<div class="field" id="f_' + name + '">' +
+        '<label class="field-label">' + label + (required ? '<span class="required">*</span>' : '') + '</label>' +
+        '<div class="options-list">' + items + '</div>' +
+        '<div class="field-error" id="err_' + name + '">Vui lòng chọn một mục</div>' +
+        '</div>';
+    }
+    function checkboxField(name, label, required, options, values) {
+      var items = '';
+      options.forEach(function (o) {
+        var sel = values.indexOf(o) !== -1 ? ' selected' : '';
+        items += '<label class="option-item' + sel + '" onclick="selectOption(event,this,\'' + name + '\',true)">' +
+          '<input type="checkbox" name="' + name + '" value="' + esc(o) + '"' + (values.indexOf(o) !== -1 ? ' checked' : '') + '>' +
+          '<span class="dot"></span>' + o + '</label>';
+      });
+      return '<div class="field" id="f_' + name + '">' +
+        '<label class="field-label">' + label + (required ? '<span class="required">*</span>' : '') + '</label>' +
+        '<div class="options-list">' + items + '</div>' +
+        '<div class="field-error" id="err_' + name + '">Vui lòng chọn ít nhất một mục</div>' +
+        '</div>';
+    }
+    function otherField(parentName, label, value) {
+      return '<div class="other-input-wrap" id="wrap_other_' + parentName + '">' +
+        '<input type="text" id="other_' + parentName + '" value="' + esc(value) + '" placeholder="' + label + '...">' +
+        '</div>';
+    }
+    function fieldsRow(f1, f2) { return '<div class="fields-row">' + f1 + f2 + '</div>'; }
+    function sectionHeader(num, title, desc) {
+      return '<div class="section-title"><span class="step-num">' + num + '</span>' + title + '</div>' +
+        '<div class="section-desc">' + desc + '</div>';
+    }
+    function btnRow(back, next, hasNext) {
+      var backBtn = back ? '<button class="btn btn-secondary" onclick="prevStep()">' + back + '</button>' : '<div></div>';
+      var nextBtn = hasNext ? '<button class="btn btn-primary" id="nextBtn" onclick="nextStep()">' + next + '</button>' : '';
+      return '<div class="btn-row">' + backBtn + nextBtn + '</div>';
+    }
+    function esc(s) { return String(s || '').replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); }
+
+    // ---- OPTION TOGGLE ----
+    function selectOption(e, el, name, isCheckbox) {
+      if (isCheckbox) {
+        e.preventDefault();
+        el.classList.toggle('selected');
+        var input = el.querySelector('input');
+        input.checked = !input.checked;
+      } else {
+        var all = el.parentElement.querySelectorAll('.option-item');
+        all.forEach(function (a) { a.classList.remove('selected'); a.querySelector('input').checked = false; });
+        el.classList.add('selected');
+        el.querySelector('input').checked = true;
+      }
+      checkOther(name);
+    }
+    function checkOther(name) {
+      var wrap = document.getElementById('wrap_other_' + name);
+      if (!wrap) return;
+      var inputs = document.querySelectorAll('[name="' + name + '"]:checked');
+      var hasOther = false;
+      inputs.forEach(function (i) { if (i.value.indexOf('Mục khác') !== -1 || i.value.indexOf('Khác') !== -1) hasOther = true; });
+      wrap.classList.toggle('show', hasOther);
+    }
+    function attachListeners() {
+      ['bietDen', 'khoKhan', 'giaiPhapQuanTam', 'boPhanSoHoa', 'kyVongThayDoi', 'quanLyKhachHang', 'vanDeKhau', 'chiSoCaiThien', 'giaoViecHienTai'].forEach(checkOther);
+    }
+
+    // ---- COLLECT & VALIDATE ----
+    function collect() {
+      var d = state.data;
+      function g(id) { var el = document.getElementById(id); return el ? el.value.trim() : ''; }
+      function gChecked(name) { var vals = []; document.querySelectorAll('[name="' + name + '"]:checked').forEach(function (i) { vals.push(i.value); }); return vals; }
+      if (state.step === 1) { d.hoTen = g('hoTen'); d.danhXung = g('danhXung'); d.email = g('email'); d.phone = g('phone'); d.facebook = g('facebook'); d.vaiTro = g('vaiTro'); d.bietDen = gChecked('bietDen')[0] || ''; d.bietDenKhac = g('other_bietDen'); }
+      if (state.step === 2) { d.tenDN = g('tenDN'); d.maSoThue = g('maSoThue'); d.website = g('website'); d.soNhanSu = g('soNhanSu'); d.nganhNghe = g('nganhNghe'); d.doanhThu = g('doanhThu'); }
+      if (state.step === 3) { d.khoKhan = gChecked('khoKhan'); d.khoKhanKhac = g('other_khoKhan'); d.vanDeCapBach = g('vanDeCapBach'); d.congCuHienTai = g('congCuHienTai'); d.haiLong = g('haiLong'); d.chuaHaiLong = g('chuaHaiLong'); d.kyVong = g('kyVong'); d.tieuChi = g('tieuChi'); d.giaiPhapQuanTam = gChecked('giaiPhapQuanTam'); d.giaiPhapKhac = g('other_giaiPhapQuanTam'); d.nhomGiaiPhap = gChecked('nhomGiaiPhap')[0] || ''; }
+      if (state.step === 4) {
+        if (state.branch === 'full') { d.boPhanSoHoa = gChecked('boPhanSoHoa'); d.boPhanKhac = g('other_boPhanSoHoa'); d.quyTrinhChuan = gChecked('quyTrinhChuan')[0] || ''; d.sanSangThayDoi = gChecked('sanSangThayDoi')[0] || ''; d.kyVongThayDoi = gChecked('kyVongThayDoi')[0] || ''; d.kyVongThayDoiKhac = g('other_kyVongThayDoi'); d.mucTieuToanDien = g('mucTieuToanDien'); }
+        else if (state.branch === 'crm') { d.quanLyKhachHang = gChecked('quanLyKhachHang')[0] || ''; d.quanLyKhachHangKhac = g('other_quanLyKhachHang'); d.vanDeKhau = gChecked('vanDeKhau'); d.vanDeKhauKhac = g('other_vanDeKhau'); d.soNhanSuSales = gChecked('soNhanSuSales')[0] || ''; d.quyTrinhBanHang = gChecked('quyTrinhBanHang')[0] || ''; d.chiSoCaiThien = gChecked('chiSoCaiThien')[0] || ''; d.chiSoKhac = g('other_chiSoCaiThien'); }
+        else if (state.branch === 'task') { d.giaoViecHienTai = gChecked('giaoViecHienTai'); d.giaoViecKhac = g('other_giaoViecHienTai'); d.vanDeGiaoViec = gChecked('vanDeGiaoViec')[0] || ''; d.soCapQuanLy = gChecked('soCapQuanLy')[0] || ''; d.kyVongQuanLyCongViec = g('kyVongQuanLyCongViec'); }
+      }
+    }
+
+    function validate() {
+      var errors = []; var d = state.data;
+      function err(id, msg) { var el = document.getElementById(id); var errEl = document.getElementById('err_' + id); if (el) el.classList.add('error'); if (errEl) { errEl.textContent = msg || 'Vui lòng điền thông tin này'; errEl.classList.add('show'); } errors.push(id); }
+      function clearErr(id) { var el = document.getElementById(id); var errEl = document.getElementById('err_' + id); if (el) el.classList.remove('error'); if (errEl) errEl.classList.remove('show'); }
+      if (state.step === 1) { ['hoTen', 'danhXung', 'email', 'phone', 'vaiTro', 'bietDen'].forEach(clearErr); if (!d.hoTen) err('hoTen'); if (!d.danhXung) err('danhXung'); if (!d.email || !d.email.match(/.+@.+\..+/)) err('email', 'Email không hợp lệ'); if (!d.phone) err('phone'); if (!d.vaiTro) err('vaiTro'); if (!d.bietDen) err('bietDen', 'Vui lòng chọn một mục'); }
+      if (state.step === 2) { ['maSoThue', 'soNhanSu', 'nganhNghe', 'doanhThu'].forEach(clearErr); if (!d.maSoThue) err('maSoThue'); else if (!/^[0-9][0-9\-]*[0-9]$/.test(d.maSoThue) && !/^[0-9]+$/.test(d.maSoThue)) err('maSoThue', 'Mã số thuế chỉ gồm chữ số và dấu gạch ngang (VD: 0123456789 hoặc 986897-33)'); if (!d.soNhanSu) err('soNhanSu'); if (!d.nganhNghe) err('nganhNghe'); if (!d.doanhThu) err('doanhThu'); else if (!/^[0-9]+([.,][0-9]+)?$/.test(d.doanhThu.trim())) err('doanhThu', 'Vui lòng nhập số (VD: 25 hoặc 25.5 hoặc 25,5)'); }
+      if (state.step === 3) { ['khoKhan', 'vanDeCapBach', 'congCuHienTai', 'haiLong', 'chuaHaiLong', 'kyVong', 'tieuChi', 'nhomGiaiPhap'].forEach(clearErr); if (!d.khoKhan || d.khoKhan.length === 0) err('khoKhan', 'Vui lòng chọn ít nhất một mục'); if (!d.vanDeCapBach) err('vanDeCapBach'); if (!d.congCuHienTai) err('congCuHienTai'); if (!d.haiLong) err('haiLong'); if (!d.chuaHaiLong) err('chuaHaiLong'); if (!d.kyVong) err('kyVong'); if (!d.tieuChi) err('tieuChi'); if (!d.nhomGiaiPhap) err('nhomGiaiPhap', 'Vui lòng chọn nhóm giải pháp'); }
+      if (state.step === 4) {
+        if (state.branch === 'full') { ['boPhanSoHoa', 'quyTrinhChuan', 'sanSangThayDoi', 'kyVongThayDoi', 'mucTieuToanDien'].forEach(clearErr); if (!d.boPhanSoHoa || d.boPhanSoHoa.length === 0) err('boPhanSoHoa', 'Vui lòng chọn ít nhất một mục'); if (!d.quyTrinhChuan) err('quyTrinhChuan', 'Vui lòng chọn một mục'); if (!d.sanSangThayDoi) err('sanSangThayDoi', 'Vui lòng chọn một mục'); if (!d.kyVongThayDoi) err('kyVongThayDoi', 'Vui lòng chọn một mục'); if (!d.mucTieuToanDien) err('mucTieuToanDien'); }
+        else if (state.branch === 'crm') { ['quanLyKhachHang', 'vanDeKhau', 'soNhanSuSales', 'quyTrinhBanHang', 'chiSoCaiThien'].forEach(clearErr); if (!d.quanLyKhachHang) err('quanLyKhachHang', 'Vui lòng chọn một mục'); if (!d.vanDeKhau || d.vanDeKhau.length === 0) err('vanDeKhau', 'Vui lòng chọn ít nhất một mục'); if (!d.soNhanSuSales) err('soNhanSuSales', 'Vui lòng chọn một mục'); if (!d.quyTrinhBanHang) err('quyTrinhBanHang', 'Vui lòng chọn một mục'); if (!d.chiSoCaiThien) err('chiSoCaiThien', 'Vui lòng chọn một mục'); }
+        else if (state.branch === 'task') { ['giaoViecHienTai', 'kyVongQuanLyCongViec'].forEach(clearErr); if (!d.giaoViecHienTai || d.giaoViecHienTai.length === 0) err('giaoViecHienTai', 'Vui lòng chọn ít nhất một mục'); if (!d.kyVongQuanLyCongViec) err('kyVongQuanLyCongViec'); }
+      }
+      if (errors.length > 0) { var firstEl = document.getElementById(errors[0]); if (firstEl) firstEl.scrollIntoView({ behavior: 'smooth', block: 'center' }); }
+      return errors.length === 0;
+    }
+
+    // ---- NAVIGATION ----
+    function nextStep() {
+      if (state.step === 0) { state.step = 1; render(); return; }
+      collect();
+      if (!validate()) return;
+      if (state.step === 4) { submitData(); return; }
+      state.step++;
+      render();
+    }
+    function prevStep() { collect(); state.step--; render(); }
+
+    // ---- SUBMIT via fetch (no-cors + URLSearchParams) ----
+    function submitData() {
+      var btn = document.getElementById('nextBtn');
+      if (btn) { btn.disabled = true; btn.innerHTML = '<span class="loading-spin"></span> Đang gửi...'; }
+
+      // URLSearchParams → Content-Type: application/x-www-form-urlencoded
+      // → "simple" request, không cần preflight CORS
+      // mode: 'no-cors' → browser gửi request, response opaque (không đọc được) nhưng Apps Script VẪN nhận và ghi Sheet
+      var params = new URLSearchParams();
+      params.append('data', JSON.stringify(state.data));
+
+      fetch(APPS_SCRIPT_URL, {
+        method: 'POST',
+        body: params,
+        mode: 'no-cors',
+        redirect: 'follow'
+      })
+        .then(function () {
+          state.step = 5;
+          render();
+        })
+        .catch(function () {
+          // Network error thật sự
+          if (btn) { btn.disabled = false; btn.innerHTML = 'Gửi khảo sát 🚀'; }
+          alert('Lỗi kết nối. Vui lòng kiểm tra URL Apps Script và thử lại.');
+        });
+    }
+
+
+    render();
+  </script>
 </body>
+
 </html>
